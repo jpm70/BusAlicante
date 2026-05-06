@@ -3,92 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bus Alicante - Tiempo Real</title>
+    <title>Bus Alicante Live - Mi App</title>
     
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Leaflet CSS para el mapa -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     
     <style>
-        body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
-        #map { height: 100vh; width: 100%; }
+        /* Estilos básicos para que ocupe toda la pantalla */
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        #map { height: 100vh; width: 100%; z-index: 1; }
+
+        /* Panel de información inferior */
         .info-panel { 
-            position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
-            width: 90%; max-width: 400px; z-index: 1000;
-            background: white; padding: 15px; border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2); text-align: center;
+            position: fixed; 
+            bottom: 25px; 
+            left: 50%; 
+            transform: translateX(-50%);
+            width: 85%; 
+            max-width: 450px; 
+            z-index: 1000;
+            background: white; 
+            padding: 20px; 
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3); 
+            text-align: center;
         }
-        hr { border: 0; border-top: 1px solid #eee; margin: 10px 0; }
+
+        .linea-bus {
+            background: #f0f4f8;
+            margin: 5px 0;
+            padding: 8px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+        }
+
+        .minutos { color: #e67e22; }
+        hr { border: 0; border-top: 1px solid #eee; margin: 15px 0; }
     </style>
 </head>
 <body>
 
     <div id="map"></div>
-    <div id="info" class="info-panel">Toca una parada para ver los tiempos</div>
+    <div id="info" class="info-panel">
+        <strong>Bus Alicante Live</strong><br>
+        Toca cualquier parada azul en el mapa.
+    </div>
 
     <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
     <script>
-        // 1. Inicializar el mapa centrado en Alicante
+        // 1. Configuración del Mapa (Centro inicial en Alicante)
         const map = L.map('map').setView([38.345, -0.49], 14);
 
-        // 2. Capa de mapa (CartoDB para evitar bloqueos)
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        // 2. Capa visual del mapa (CartoDB para evitar errores 403)
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
             attribution: '© OpenStreetMap'
         }).addTo(map);
 
-        // 3. Cargar el archivo paradas.json que generamos con Python
+        // 3. Carga masiva de paradas desde tu paradas.json
         fetch('paradas.json')
             .then(response => response.json())
             .then(paradas => {
                 paradas.forEach(p => {
-                    // Usamos los campos 'lat', 'lon', 'n' e 'id' de tu JSON
+                    // Marcador basado en stop_lat y stop_lon de tu archivo
                     const marker = L.marker([p.lat, p.lon]).addTo(map);
                     
                     marker.on('click', () => {
-                        // Preparamos el panel con un contenedor vacío para los tiempos
+                        // Mostramos stop_name (p.n) y stop_id (p.id)
                         document.getElementById('info').innerHTML = `
-                            <strong>${p.n}</strong><br>
-                            <small>ID Parada: ${p.id}</small>
+                            <div style="font-size: 1.1em; margin-bottom: 5px;"><strong>${p.n}</strong></div>
+                            <small style="color: #666;">ID de parada: ${p.id}</small>
                             <hr>
-                            <div id="tiempos">Consultando tiempo real...</div>
+                            <div id="tiempos">Cargando tiempos...</div>
                         `;
-                        // Llamamos a la API usando el stop_id[cite: 1]
                         obtenerTiempos(p.id);
                     });
                 });
             })
-            .catch(error => {
-                console.error('Error al cargar paradas.json:', error);
-                document.getElementById('info').innerHTML = "Error al cargar la base de datos de paradas.";
+            .catch(err => {
+                console.error("No se pudo cargar paradas.json", err);
+                document.getElementById('info').innerHTML = "Error: No se encuentra paradas.json";
             });
 
-        // 4. Función de tiempo real
+        // 4. Función para consultar la API de Vectalia
         async function obtenerTiempos(stopId) {
-            // El proxy es necesario para evitar el error CORS en GitHub Pages
-            const proxy = "https://cors-anywhere.herokuapp.com/";
-            const urlApi = `https://api.vectalia.es/v1/alicante/stops/${stopId}/estimations`;
+            const container = document.getElementById('tiempos');
+            const apiTarget = `https://api.vectalia.es/v1/alicante/stops/${stopId}/estimations`;
+            
+            // Usamos AllOrigins para saltar el bloqueo CORS
+            const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(apiTarget)}`;
 
             try {
-                const response = await fetch(proxy + urlApi);
-                const data = await response.json();
+                const response = await fetch(proxyUrl);
+                const result = await response.json();
                 
-                let html = "";
+                // AllOrigins devuelve el JSON dentro de 'contents' como texto
+                const data = JSON.parse(result.contents);
+                
                 if (data && data.length > 0) {
+                    let html = "";
                     data.forEach(bus => {
-                        html += `🚍 L${bus.linea}: <strong>${bus.minutos} min</strong><br>`;
+                        html += `
+                            <div class="linea-bus">
+                                <span>🚍 Línea ${bus.linea}</span>
+                                <span class="minutos">${bus.minutos} min</span>
+                            </div>`;
                     });
+                    container.innerHTML = html;
                 } else {
-                    html = "No hay buses previstos próximamente.";
+                    container.innerHTML = "No hay información de buses ahora mismo.";
                 }
-                // Actualizamos el div específico de tiempos
-                const divTiempos = document.getElementById('tiempos');
-                if(divTiempos) divTiempos.innerHTML = html;
-                
-            } catch (e) {
-                const divTiempos = document.getElementById('tiempos');
-                if(divTiempos) divTiempos.innerHTML = "Error de conexión con Vectalia.";
-                console.error(e);
+            } catch (error) {
+                container.innerHTML = "<span style='color:red;'>Error de conexión con la red de buses.</span>";
+                console.error("Error API:", error);
             }
         }
     </script>
