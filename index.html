@@ -3,76 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Alicante Bus Live</title>
+    <title>Alicante Bus Live - Modo Experto</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
-        body { margin: 0; padding: 0; font-family: sans-serif; }
-        #map { height: 100vh; width: 100%; }
+        body { margin: 0; padding: 0; font-family: sans-serif; background: #f4f7f6; }
+        #map { height: 100vh; width: 100%; z-index: 1; }
         .info-panel { 
             position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
-            width: 90%; max-width: 400px; z-index: 1000;
+            width: 90%; max-width: 420px; z-index: 1000;
             background: white; padding: 15px; border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3); text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3); text-align: center;
         }
-        .bus-item {
-            background: #f1f5f9; margin: 5px 0; padding: 10px;
-            border-radius: 10px; display: flex; justify-content: space-between;
-            font-weight: bold; border-left: 5px solid #0052cc;
+        .bus-card {
+            display: flex; justify-content: space-between; align-items: center;
+            background: #eef2ff; margin: 8px 0; padding: 12px;
+            border-radius: 10px; border-left: 5px solid #2563eb;
         }
-        .time { color: #d97706; }
+        .bus-line { font-weight: bold; font-size: 1.1em; }
+        .bus-time { color: #d97706; font-weight: bold; }
+        .error-box { background: #fee2e2; color: #b91c1c; padding: 10px; border-radius: 8px; font-size: 0.85em; margin-top: 10px; }
     </style>
 </head>
 <body>
 
-<div id="map"></div>
-<div id="info" class="info-panel">Toca cualquier parada para ver el tiempo real</div>
+    <div id="map"></div>
+    <div id="info" class="info-panel">
+        <strong>Bus Alicante</strong><br>
+        <small>Toca una parada para ver el tiempo real</small>
+    </div>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script>
-    const map = L.map('map', { zoomControl: false }).setView([38.345, -0.49], 15);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png').addTo(map);
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-    // Cargamos TODAS las paradas del JSON
-    fetch('paradas.json')
-        .then(res => res.json())
-        .then(paradas => {
-            paradas.forEach(p => {
-                const marker = L.marker([p.lat, p.lon]).addTo(map);
-                marker.on('click', () => {
-                    document.getElementById('info').innerHTML = `
-                        <strong>${p.n}</strong><br>
-                        <small>ID: ${p.id}</small><hr>
-                        <div id="tiempos">Consultando...</div>
-                    `;
-                    obtenerTiempos(p.id);
+    <script>
+        // 1. Inicializar mapa
+        const map = L.map('map', { zoomControl: false }).setView([38.345, -0.49], 15);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png').addTo(map);
+
+        // 2. Cargar TODAS las paradas (Gisbert-Alcalá, Estación, etc)
+        fetch('paradas.json')
+            .then(res => res.json())
+            .then(paradas => {
+                paradas.forEach(p => {
+                    const marker = L.marker([p.lat, p.lon]).addTo(map);
+                    marker.on('click', () => {
+                        document.getElementById('info').innerHTML = `
+                            <div style="font-weight: bold;">${p.n}</div>
+                            <div style="color: #666; font-size: 0.8em;">ID: ${p.id}</div>
+                            <hr style="border:0; border-top:1px solid #eee; margin: 10px 0;">
+                            <div id="tiempos">Cargando...</div>
+                        `;
+                        obtenerTiempos(p.id);
+                    });
                 });
             });
-        });
 
-    async function obtenerTiempos(id) {
-        const div = document.getElementById('tiempos');
-        const api = `https://api.vectalia.es/v1/alicante/stops/${id}/estimations`;
-        
-        // Proxy alternativo: Thingproxy (muy estable para APIs sencillas)
-        const proxy = "https://thingproxy.freeboard.io/fetch/";
-
-        try {
-            const r = await fetch(proxy + api);
-            const data = await r.json();
+        // 3. Función Inteligente de Tiempo Real
+        async function obtenerTiempos(stopId) {
+            const container = document.getElementById('tiempos');
+            const targetUrl = `https://api.vectalia.es/v1/alicante/stops/${stopId}/estimations`;
             
-            if (data && data.length > 0) {
-                let h = "";
-                data.forEach(b => {
-                    h += `<div class="bus-item"><span>🚍 L${b.linea}</span><span class="time">${b.minutos} min</span></div>`;
-                });
-                div.innerHTML = h;
-            } else {
-                div.innerHTML = "Sin buses en los próximos 30 min.";
+            // Intentamos 3 métodos: Directo (con extensión), Proxy 1 y Proxy 2
+            const proxies = [
+                "", // Directo
+                "https://api.allorigins.win/get?url=", 
+                "https://thingproxy.freeboard.io/fetch/"
+            ];
+
+            for (let proxy of proxies) {
+                try {
+                    let fetchUrl = proxy ? (proxy.includes("allorigins") ? proxy + encodeURIComponent(targetUrl) : proxy + targetUrl) : targetUrl;
+                    
+                    const response = await fetch(fetchUrl);
+                    if (!response.ok) continue;
+
+                    let data;
+                    const rawData = await response.json();
+                    
+                    // AllOrigins devuelve los datos dentro de .contents
+                    data = proxy.includes("allorigins") ? JSON.parse(rawData.contents) : rawData;
+
+                    if (Array.isArray(data)) {
+                        renderBuses(data);
+                        return; // ÉXITO: Salimos del bucle
+                    }
+                } catch (e) {
+                    console.warn(`Fallo con el método: ${proxy || "Directo"}`);
+                }
             }
-        } catch (e) {
-            div.innerHTML = "<span style='color:red'>Error de red. Intenta pulsar de nuevo.</span>";
+
+            // Si llegamos aquí, todos fallaron
+            container.innerHTML = `
+                <div class="error-box">
+                    <strong>Bloqueo de seguridad (CORS)</strong><br>
+                    Para ver los tiempos en esta parada (${stopId}), activa la extensión 
+                    <a href="https://bit.ly/allow-cors-ext" target="_blank">Allow CORS</a>.
+                </div>
+            `;
         }
-    }
-</script>
+
+        function renderBuses(data) {
+            const container = document.getElementById('tiempos');
+            if (data.length === 0) {
+                container.innerHTML = "No hay buses previstos próximamente.";
+                return;
+            }
+            let html = "";
+            data.forEach(b => {
+                html += `
+                    <div class="bus-card">
+                        <span class="bus-line">🚍 Línea ${b.linea}</span>
+                        <span class="bus-time">${b.minutos} min</span>
+                    </div>`;
+            });
+            container.innerHTML = html;
+        }
+    </script>
 </body>
 </html>
