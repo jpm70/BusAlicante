@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bus Alicante - Prototipo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body { margin: 0; padding: 0; font-family: sans-serif; }
+        #map { height: 100vh; width: 100%; }
+        .info-panel { 
+            position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+            width: 90%; max-width: 400px; z-index: 1000;
+            background: white; padding: 15px; border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="info" class="info-panel">Toca un marcador para ver tiempos</div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Coordenadas iniciales cerca de Luceros (38.3466, -0.4892)
+        const map = L.map('map').setView([38.345, -0.49], 15);
+
+        // Nuevo servidor de mapas para evitar el bloqueo 403
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Datos extraídos de tu stops.txt[cite: 1]
+        const paradas = [
+            {id: "2501", n: "MAISONNAVE-PORTUGAL", lat: 38.3434, lon: -0.491749},
+            {id: "2503", n: "LUCEROS-EL SABIO", lat: 38.3466, lon: -0.489226},
+            {id: "2604", n: "MERCADO-EL SABIO", lat: 38.3474, lon: -0.486647},
+            {id: "4009", n: "PUERTA DEL MAR", lat: 38.3452, lon: -0.478817},
+            {id: "3101", n: "LUCEROS", lat: 38.3463, lon: -0.490516}
+        ];
+
+        paradas.forEach(p => {
+            const marker = L.marker([p.lat, p.lon]).addTo(map);
+            marker.on('click', () => {
+                document.getElementById('info').innerHTML = `<b>${p.n}</b><br>ID: ${p.id}<br><small>Consultando tiempo real...</small>`;
+                obtenerTiempos(p.id);
+            });
+        });
+
+        function obtenerTiempos(stopId) {
+            // Aquí irá la llamada a la API que descubras por inspección
+            console.log("Consultando tiempos para la parada: " + stopId);
+        }
+    </script>
+</body>
+</html>
