@@ -1,0 +1,3962 @@
+[
+  {
+    "id": "2501",
+    "n": "MAISONNAVE-PORTUGAL",
+    "lat": 38.3434,
+    "lon": -0.491749
+  },
+  {
+    "id": "2503",
+    "n": "LUCEROS-EL SABIO",
+    "lat": 38.3466,
+    "lon": -0.489226
+  },
+  {
+    "id": "2507",
+    "n": "MARQ-CASTILLO (TRAM)",
+    "lat": 38.3521,
+    "lon": -0.476153
+  },
+  {
+    "id": "2508",
+    "n": "LA GOTETA",
+    "lat": 38.3564,
+    "lon": -0.47114
+  },
+  {
+    "id": "2509",
+    "n": "COLEGIO CALASANCIO",
+    "lat": 38.3587,
+    "lon": -0.468003
+  },
+  {
+    "id": "2510",
+    "n": "DÉNIA-JESUITAS",
+    "lat": 38.3615,
+    "lon": -0.464988
+  },
+  {
+    "id": "2511",
+    "n": "DÉNIA-CONCHA ESPINA",
+    "lat": 38.3663,
+    "lon": -0.459578
+  },
+  {
+    "id": "2512",
+    "n": "CAJA DE AHORROS",
+    "lat": 38.369,
+    "lon": -0.457985
+  },
+  {
+    "id": "2513",
+    "n": "COMPLEJO VISTAHERMOSA",
+    "lat": 38.3727,
+    "lon": -0.455761
+  },
+  {
+    "id": "2514",
+    "n": "ONCE",
+    "lat": 38.3825,
+    "lon": -0.450771
+  },
+  {
+    "id": "2515",
+    "n": "DÉNIA-ESTACIÓN DE SERVICIO",
+    "lat": 38.3866,
+    "lon": -0.447158
+  },
+  {
+    "id": "2565",
+    "n": "DÉNIA-HOGAR PROVINCIAL",
+    "lat": 38.3855,
+    "lon": -0.449464
+  },
+  {
+    "id": "2566",
+    "n": "ONCE",
+    "lat": 38.3824,
+    "lon": -0.451276
+  },
+  {
+    "id": "2567",
+    "n": "COMPLEJO VISTAHERMOSA",
+    "lat": 38.3727,
+    "lon": -0.456187
+  },
+  {
+    "id": "2568",
+    "n": "DÉNIA-LA ENCINA",
+    "lat": 38.3706,
+    "lon": -0.457345
+  },
+  {
+    "id": "2569",
+    "n": "CAJA DE AHORROS",
+    "lat": 38.3679,
+    "lon": -0.458893
+  },
+  {
+    "id": "2570",
+    "n": "DÉNIA-ALBUFERETA",
+    "lat": 38.3651,
+    "lon": -0.460753
+  },
+  {
+    "id": "2571",
+    "n": "DÉNIA-CLÍNICA VISTAHERMOSA",
+    "lat": 38.3624,
+    "lon": -0.464155
+  },
+  {
+    "id": "2572",
+    "n": "DÉNIA-JESUITAS",
+    "lat": 38.3607,
+    "lon": -0.466093
+  },
+  {
+    "id": "2573",
+    "n": "COLEGIO CALASANCIO",
+    "lat": 38.3584,
+    "lon": -0.468735
+  },
+  {
+    "id": "2574",
+    "n": "LA GOTETA",
+    "lat": 38.3565,
+    "lon": -0.471272
+  },
+  {
+    "id": "2582",
+    "n": "DENIA - VIVEROS FORESTALES",
+    "lat": 38.3881,
+    "lon": -0.445607
+  },
+  {
+    "id": "2598",
+    "n": "DÉNIA-LAS BRISAS",
+    "lat": 38.3635,
+    "lon": -0.461658
+  },
+  {
+    "id": "2601",
+    "n": "ESTACIÓN-SALAMANCA",
+    "lat": 38.3439,
+    "lon": -0.494697
+  },
+  {
+    "id": "2602",
+    "n": "ESTACIÓN-MAISONNAVE",
+    "lat": 38.3432,
+    "lon": -0.49377
+  },
+  {
+    "id": "2603",
+    "n": "MUNTANYETA-SOTO",
+    "lat": 38.3442,
+    "lon": -0.489162
+  },
+  {
+    "id": "2604",
+    "n": "MERCADO-EL SABIO",
+    "lat": 38.3474,
+    "lon": -0.486647
+  },
+  {
+    "id": "2606",
+    "n": "RAMBLA-PORTAL DE ELCHE",
+    "lat": 38.3447,
+    "lon": -0.483504
+  },
+  {
+    "id": "2608",
+    "n": "POSTIGUET-PASARELA",
+    "lat": 38.3465,
+    "lon": -0.4767
+  },
+  {
+    "id": "2609",
+    "n": "LA MARINA (TRAM)",
+    "lat": 38.349,
+    "lon": -0.473009
+  },
+  {
+    "id": "2610",
+    "n": "FINCA ADOC",
+    "lat": 38.3598,
+    "lon": -0.452506
+  },
+  {
+    "id": "2611",
+    "n": "LA ISLETA (TRAM)",
+    "lat": 38.3619,
+    "lon": -0.448254
+  },
+  {
+    "id": "2612",
+    "n": "PLAYA ALBUFERETA",
+    "lat": 38.3629,
+    "lon": -0.441696
+  },
+  {
+    "id": "2621",
+    "n": "AV. BENIDORM (TRAM)",
+    "lat": 38.3661,
+    "lon": -0.411829
+  },
+  {
+    "id": "2622",
+    "n": "FONTANA",
+    "lat": 38.3685,
+    "lon": -0.411904
+  },
+  {
+    "id": "2624",
+    "n": "LONDRES (TRAM)",
+    "lat": 38.3711,
+    "lon": -0.411949
+  },
+  {
+    "id": "2625",
+    "n": "CASTILLA",
+    "lat": 38.3734,
+    "lon": -0.412015
+  },
+  {
+    "id": "2663",
+    "n": "CASTILLA",
+    "lat": 38.3729,
+    "lon": -0.412251
+  },
+  {
+    "id": "2664",
+    "n": "LONDRES (TRAM)",
+    "lat": 38.3705,
+    "lon": -0.412187
+  },
+  {
+    "id": "2666",
+    "n": "FONTANA",
+    "lat": 38.3679,
+    "lon": -0.412132
+  },
+  {
+    "id": "2674",
+    "n": "PLAYA ALBUFERETA",
+    "lat": 38.3634,
+    "lon": -0.442252
+  },
+  {
+    "id": "2675",
+    "n": "LA ISLETA (TRAM)",
+    "lat": 38.3633,
+    "lon": -0.447324
+  },
+  {
+    "id": "2676",
+    "n": "VISTAMAR",
+    "lat": 38.3614,
+    "lon": -0.449452
+  },
+  {
+    "id": "2677",
+    "n": "FINCA ADOC",
+    "lat": 38.36,
+    "lon": -0.452257
+  },
+  {
+    "id": "2678",
+    "n": "LA MARINA (TRAM)",
+    "lat": 38.3498,
+    "lon": -0.472274
+  },
+  {
+    "id": "2682",
+    "n": "RAMBLA-SAN CRISTÓBAL",
+    "lat": 38.3464,
+    "lon": -0.484234
+  },
+  {
+    "id": "2685",
+    "n": "POSTIGUET-PASARELA",
+    "lat": 38.347,
+    "lon": -0.476455
+  },
+  {
+    "id": "2688",
+    "n": "RAMBLA-PORTAL DE ELCHE",
+    "lat": 38.3448,
+    "lon": -0.483475
+  },
+  {
+    "id": "2700",
+    "n": "IGLESIA DE SANTIAGO",
+    "lat": 38.3622,
+    "lon": -0.437589
+  },
+  {
+    "id": "2701",
+    "n": "ALMADRABA",
+    "lat": 38.361,
+    "lon": -0.432301
+  },
+  {
+    "id": "2702",
+    "n": "IES CAP DE L'HORTA",
+    "lat": 38.3594,
+    "lon": -0.431487
+  },
+  {
+    "id": "2703",
+    "n": "VENECIA",
+    "lat": 38.3585,
+    "lon": -0.429642
+  },
+  {
+    "id": "2704",
+    "n": "PALANGRE-LAS REDES",
+    "lat": 38.3589,
+    "lon": -0.427364
+  },
+  {
+    "id": "2705",
+    "n": "PALANGRE-TRIDENTE",
+    "lat": 38.3592,
+    "lon": -0.424057
+  },
+  {
+    "id": "2706",
+    "n": "PARQUE DEL CABO",
+    "lat": 38.3574,
+    "lon": -0.422359
+  },
+  {
+    "id": "2707",
+    "n": "C.C. AZAHARA",
+    "lat": 38.3592,
+    "lon": -0.419821
+  },
+  {
+    "id": "2708",
+    "n": "C.P. VORAMAR",
+    "lat": 38.3613,
+    "lon": -0.419314
+  },
+  {
+    "id": "2709",
+    "n": "C.P. EL FARO",
+    "lat": 38.3593,
+    "lon": -0.415182
+  },
+  {
+    "id": "2710",
+    "n": "CABO DE LAS HUERTAS-EL FARO",
+    "lat": 38.3575,
+    "lon": -0.413395
+  },
+  {
+    "id": "2711",
+    "n": "LA DORADA",
+    "lat": 38.3615,
+    "lon": -0.412576
+  },
+  {
+    "id": "2712",
+    "n": "PLAZA LA CORUÑA",
+    "lat": 38.3753,
+    "lon": -0.411947
+  },
+  {
+    "id": "2713",
+    "n": "PLAYA HUERTAS",
+    "lat": 38.3627,
+    "lon": -0.413243
+  },
+  {
+    "id": "2714",
+    "n": "CAMINO DEL FARO",
+    "lat": 38.3627,
+    "lon": -0.416517
+  },
+  {
+    "id": "2715",
+    "n": "C.P. VORAMAR",
+    "lat": 38.3606,
+    "lon": -0.419668
+  },
+  {
+    "id": "2716",
+    "n": "C.C. AZAHARA",
+    "lat": 38.3593,
+    "lon": -0.42007
+  },
+  {
+    "id": "2717",
+    "n": "PARQUE DEL CABO",
+    "lat": 38.3573,
+    "lon": -0.422177
+  },
+  {
+    "id": "2718",
+    "n": "PALANGRE-TRIDENTE",
+    "lat": 38.3592,
+    "lon": -0.424146
+  },
+  {
+    "id": "2719",
+    "n": "PALANGRE-LAS REDES",
+    "lat": 38.359,
+    "lon": -0.427589
+  },
+  {
+    "id": "2720",
+    "n": "VENECIA",
+    "lat": 38.3586,
+    "lon": -0.429684
+  },
+  {
+    "id": "2721",
+    "n": "IES CAP DE L'HORTA",
+    "lat": 38.3592,
+    "lon": -0.431149
+  },
+  {
+    "id": "2722",
+    "n": "ALMADRABA",
+    "lat": 38.362,
+    "lon": -0.432459
+  },
+  {
+    "id": "2723",
+    "n": "IGLESIA DE SANTIAGO",
+    "lat": 38.3624,
+    "lon": -0.436783
+  },
+  {
+    "id": "2724",
+    "n": "CAMINO DEL FARO",
+    "lat": 38.3621,
+    "lon": -0.416834
+  },
+  {
+    "id": "2725",
+    "n": "NASA",
+    "lat": 38.3628,
+    "lon": -0.434719
+  },
+  {
+    "id": "2726",
+    "n": "ADOLFO SUÁREZ",
+    "lat": 38.3624,
+    "lon": -0.433773
+  },
+  {
+    "id": "2727",
+    "n": "ADOLFO SUÁREZ",
+    "lat": 38.3623,
+    "lon": -0.433331
+  },
+  {
+    "id": "2729",
+    "n": "IES PLAYA DE SAN JUAN",
+    "lat": 38.3769,
+    "lon": -0.416273
+  },
+  {
+    "id": "2731",
+    "n": "AV. BENIDORM (TRAM)",
+    "lat": 38.3656,
+    "lon": -0.412032
+  },
+  {
+    "id": "2733",
+    "n": "MILÁN",
+    "lat": 38.3775,
+    "lon": -0.412018
+  },
+  {
+    "id": "2734",
+    "n": "COSTA BLANCA (TRAM)",
+    "lat": 38.3803,
+    "lon": -0.412
+  },
+  {
+    "id": "2750",
+    "n": "LA DORADA 8A",
+    "lat": 38.3595,
+    "lon": -0.412626
+  },
+  {
+    "id": "2751",
+    "n": "ARMAJAL",
+    "lat": 38.364,
+    "lon": -0.411834
+  },
+  {
+    "id": "2753",
+    "n": "PLAZA LA CORUÑA",
+    "lat": 38.3764,
+    "lon": -0.414781
+  },
+  {
+    "id": "2755",
+    "n": "C.P. EL FARO",
+    "lat": 38.36,
+    "lon": -0.41399
+  },
+  {
+    "id": "2843",
+    "n": "HOSPITAL SANT JOAN",
+    "lat": 38.3896,
+    "lon": -0.43518
+  },
+  {
+    "id": "2900",
+    "n": "ESTACIÓN-AVENIDA",
+    "lat": 38.3448,
+    "lon": -0.494231
+  },
+  {
+    "id": "2902",
+    "n": "MERCADO-SAN VICENTE",
+    "lat": 38.3492,
+    "lon": -0.484766
+  },
+  {
+    "id": "2904",
+    "n": "ALCOY-AUDITORIO",
+    "lat": 38.3554,
+    "lon": -0.487845
+  },
+  {
+    "id": "2905",
+    "n": "ALCOY-PARQUE DUVAL",
+    "lat": 38.3576,
+    "lon": -0.489532
+  },
+  {
+    "id": "2906",
+    "n": "CONDE LUMIARES",
+    "lat": 38.3603,
+    "lon": -0.491544
+  },
+  {
+    "id": "2907",
+    "n": "NOVELDA-GRAN VÍA",
+    "lat": 38.3627,
+    "lon": -0.493316
+  },
+  {
+    "id": "2908",
+    "n": "NOVELDA-GASOLINERA",
+    "lat": 38.3642,
+    "lon": -0.494433
+  },
+  {
+    "id": "2909",
+    "n": "NOVELDA-IGLESIA",
+    "lat": 38.3664,
+    "lon": -0.495867
+  },
+  {
+    "id": "2910",
+    "n": "NOVELDA-JARALES",
+    "lat": 38.3685,
+    "lon": -0.496594
+  },
+  {
+    "id": "2911",
+    "n": "NOVELDA-PENÀGUILA",
+    "lat": 38.3721,
+    "lon": -0.497752
+  },
+  {
+    "id": "2912",
+    "n": "NOVELDA-BERNÁCER",
+    "lat": 38.3742,
+    "lon": -0.498481
+  },
+  {
+    "id": "2936",
+    "n": "NOVELDA-BERNÁCER",
+    "lat": 38.3734,
+    "lon": -0.498405
+  },
+  {
+    "id": "2937",
+    "n": "NOVELDA-PENÀGUILA",
+    "lat": 38.3721,
+    "lon": -0.49789
+  },
+  {
+    "id": "2938",
+    "n": "NOVELDA-JARALES",
+    "lat": 38.369,
+    "lon": -0.496934
+  },
+  {
+    "id": "2939",
+    "n": "NOVELDA-IGLESIA",
+    "lat": 38.3658,
+    "lon": -0.49584
+  },
+  {
+    "id": "2940",
+    "n": "NOVELDA-GASOLINERA",
+    "lat": 38.3637,
+    "lon": -0.49431
+  },
+  {
+    "id": "2941",
+    "n": "NOVELDA-GRAN VÍA",
+    "lat": 38.3625,
+    "lon": -0.49338
+  },
+  {
+    "id": "2942",
+    "n": "CONDE LUMIARES",
+    "lat": 38.3608,
+    "lon": -0.492089
+  },
+  {
+    "id": "2943",
+    "n": "ALCOY-PARQUE DUVAL",
+    "lat": 38.357,
+    "lon": -0.489292
+  },
+  {
+    "id": "2944",
+    "n": "ALCOY-AUDITORIO",
+    "lat": 38.3547,
+    "lon": -0.487572
+  },
+  {
+    "id": "2946",
+    "n": "MERCADO-CALDERÓN",
+    "lat": 38.349,
+    "lon": -0.485962
+  },
+  {
+    "id": "2947",
+    "n": "LUCEROS-EL SABIO",
+    "lat": 38.3465,
+    "lon": -0.489458
+  },
+  {
+    "id": "2952",
+    "n": "CAMPO DE GOLF (TRAM)",
+    "lat": 38.38,
+    "lon": -0.424338
+  },
+  {
+    "id": "2953",
+    "n": "TORRE PLÁCIDA",
+    "lat": 38.381,
+    "lon": -0.425697
+  },
+  {
+    "id": "2954",
+    "n": "PARQUE H. Y J. FRANCÉS",
+    "lat": 38.3832,
+    "lon": -0.428493
+  },
+  {
+    "id": "2957",
+    "n": "PARQUE H. Y J. FRANCÉS",
+    "lat": 38.383,
+    "lon": -0.428602
+  },
+  {
+    "id": "2958",
+    "n": "TORRE PLÁCIDA",
+    "lat": 38.3811,
+    "lon": -0.426071
+  },
+  {
+    "id": "2959",
+    "n": "CAMPO DE GOLF (TRAM)",
+    "lat": 38.3789,
+    "lon": -0.423118
+  },
+  {
+    "id": "2964",
+    "n": "ESTACIÓN-ÓSCAR ESPLÁ",
+    "lat": 38.3422,
+    "lon": -0.494479
+  },
+  {
+    "id": "2976",
+    "n": "LA CADENA",
+    "lat": 38.3882,
+    "lon": -0.438343
+  },
+  {
+    "id": "2979",
+    "n": "CLOT",
+    "lat": 38.3748,
+    "lon": -0.495943
+  },
+  {
+    "id": "2980",
+    "n": "VIRGEN DEL REMEDIO-PÉREZ MIRETE",
+    "lat": 38.3743,
+    "lon": -0.492001
+  },
+  {
+    "id": "2982",
+    "n": "ALONSO-AAIÚN",
+    "lat": 38.3617,
+    "lon": -0.483793
+  },
+  {
+    "id": "2983",
+    "n": "ALONSO-AAIÚN",
+    "lat": 38.3617,
+    "lon": -0.48391
+  },
+  {
+    "id": "2984",
+    "n": "CASTELLÓ-DÁMASO ALONSO",
+    "lat": 38.3695,
+    "lon": -0.486123
+  },
+  {
+    "id": "2985",
+    "n": "JIJONA-SEGARRA",
+    "lat": 38.3582,
+    "lon": -0.484432
+  },
+  {
+    "id": "2986",
+    "n": "JIJONA-SEGARRA",
+    "lat": 38.3583,
+    "lon": -0.484198
+  },
+  {
+    "id": "2999",
+    "n": "RAMBLA-SAN FERNANDO",
+    "lat": 38.3441,
+    "lon": -0.483043
+  },
+  {
+    "id": "3001",
+    "n": "JIJONA-ADORATRICES",
+    "lat": 38.3566,
+    "lon": -0.485209
+  },
+  {
+    "id": "3003",
+    "n": "HOSPITAL-ALONSO",
+    "lat": 38.3634,
+    "lon": -0.484147
+  },
+  {
+    "id": "3004",
+    "n": "ALONSO-ALCOLEJA",
+    "lat": 38.3667,
+    "lon": -0.4852
+  },
+  {
+    "id": "3005",
+    "n": "MAESTRE ALONSO (TRAM)",
+    "lat": 38.3683,
+    "lon": -0.485651
+  },
+  {
+    "id": "3006",
+    "n": "C.P. VIRGEN DEL REMEDIO",
+    "lat": 38.3708,
+    "lon": -0.486285
+  },
+  {
+    "id": "3008",
+    "n": "CASTELLÓ-ESMERALDA",
+    "lat": 38.3747,
+    "lon": -0.487167
+  },
+  {
+    "id": "3009",
+    "n": "INTERCITY",
+    "lat": 38.3801,
+    "lon": -0.488561
+  },
+  {
+    "id": "3010",
+    "n": "VILLA MARÍA",
+    "lat": 38.3818,
+    "lon": -0.488948
+  },
+  {
+    "id": "3011",
+    "n": "LAS PARRAS",
+    "lat": 38.3855,
+    "lon": -0.490663
+  },
+  {
+    "id": "3012",
+    "n": "LOS POSTIGOS",
+    "lat": 38.3879,
+    "lon": -0.490076
+  },
+  {
+    "id": "3013",
+    "n": "VILLAFRANQUEZA-IGLESIA",
+    "lat": 38.3867,
+    "lon": -0.491045
+  },
+  {
+    "id": "3030",
+    "n": "LAS PARRAS",
+    "lat": 38.385,
+    "lon": -0.490747
+  },
+  {
+    "id": "3031",
+    "n": "VILLA MARÍA",
+    "lat": 38.3818,
+    "lon": -0.489085
+  },
+  {
+    "id": "3032",
+    "n": "INTERCITY",
+    "lat": 38.3797,
+    "lon": -0.488689
+  },
+  {
+    "id": "3033",
+    "n": "CASTELLÓ-ESMERALDA",
+    "lat": 38.3755,
+    "lon": -0.48722
+  },
+  {
+    "id": "3034",
+    "n": "GASTÓN CASTELLÓ (TRAM)",
+    "lat": 38.3732,
+    "lon": -0.487058
+  },
+  {
+    "id": "3035",
+    "n": "C.P. VIRGEN DEL REMEDIO",
+    "lat": 38.3709,
+    "lon": -0.486442
+  },
+  {
+    "id": "3036",
+    "n": "MAESTRE ALONSO (TRAM)",
+    "lat": 38.368,
+    "lon": -0.485967
+  },
+  {
+    "id": "3038",
+    "n": "HOSPITAL-ALONSO",
+    "lat": 38.3639,
+    "lon": -0.48444
+  },
+  {
+    "id": "3039",
+    "n": "ALONSO-DEVESA",
+    "lat": 38.3598,
+    "lon": -0.483792
+  },
+  {
+    "id": "3040",
+    "n": "JIJONA-ADORATRICES",
+    "lat": 38.3564,
+    "lon": -0.485397
+  },
+  {
+    "id": "3045",
+    "n": "C.P. VIRGEN DEL REMEDIO",
+    "lat": 38.3713,
+    "lon": -0.486439
+  },
+  {
+    "id": "3046",
+    "n": "ALONSO-GRAN VÍA",
+    "lat": 38.3655,
+    "lon": -0.48515
+  },
+  {
+    "id": "3047",
+    "n": "PANTEÓN DE QUIJANO",
+    "lat": 38.3516,
+    "lon": -0.484694
+  },
+  {
+    "id": "3048",
+    "n": "POLIDEPORTIVO VILLAFRANQUEZA",
+    "lat": 38.3892,
+    "lon": -0.4901
+  },
+  {
+    "id": "3100",
+    "n": "MERCADO-EL SABIO",
+    "lat": 38.3474,
+    "lon": -0.487
+  },
+  {
+    "id": "3101",
+    "n": "LUCEROS",
+    "lat": 38.3463,
+    "lon": -0.490516
+  },
+  {
+    "id": "3102",
+    "n": "Ó. ESPLÁ-FOGLIETTI",
+    "lat": 38.3412,
+    "lon": -0.494332
+  },
+  {
+    "id": "3103",
+    "n": "SOLER-POLICÍA",
+    "lat": 38.3399,
+    "lon": -0.495006
+  },
+  {
+    "id": "3104",
+    "n": "SOLER-JUZGADOS",
+    "lat": 38.3395,
+    "lon": -0.501185
+  },
+  {
+    "id": "3105",
+    "n": "IES CAVANILLES",
+    "lat": 38.3392,
+    "lon": -0.50687
+  },
+  {
+    "id": "3108",
+    "n": "SAN GABRIEL-CERCANÍAS",
+    "lat": 38.329,
+    "lon": -0.509304
+  },
+  {
+    "id": "3109",
+    "n": "PARQUE EL PALMERAL",
+    "lat": 38.3197,
+    "lon": -0.513911
+  },
+  {
+    "id": "3110",
+    "n": "EUIPO-ELCHE",
+    "lat": 38.3129,
+    "lon": -0.516739
+  },
+  {
+    "id": "3111",
+    "n": "EUIPO",
+    "lat": 38.314,
+    "lon": -0.519411
+  },
+  {
+    "id": "3112",
+    "n": "AGUA AMARGA",
+    "lat": 38.3076,
+    "lon": -0.518156
+  },
+  {
+    "id": "3113",
+    "n": "URBANOVA-PARKING",
+    "lat": 38.2874,
+    "lon": -0.521953
+  },
+  {
+    "id": "3115",
+    "n": "URBANOVA-CASASEMPERE",
+    "lat": 38.2799,
+    "lon": -0.522011
+  },
+  {
+    "id": "3116",
+    "n": "URBANOVA-LATORRE",
+    "lat": 38.2817,
+    "lon": -0.522648
+  },
+  {
+    "id": "3117",
+    "n": "URBANOVA-ROCH",
+    "lat": 38.2844,
+    "lon": -0.522453
+  },
+  {
+    "id": "3118",
+    "n": "URBANOVA-PARKING",
+    "lat": 38.2877,
+    "lon": -0.521657
+  },
+  {
+    "id": "3119",
+    "n": "AGUA AMARGA",
+    "lat": 38.308,
+    "lon": -0.517739
+  },
+  {
+    "id": "3120",
+    "n": "EUIPO-ELCHE",
+    "lat": 38.3125,
+    "lon": -0.516388
+  },
+  {
+    "id": "3121",
+    "n": "SAN GABRIEL-CERCANÍAS",
+    "lat": 38.3288,
+    "lon": -0.508967
+  },
+  {
+    "id": "3122",
+    "n": "MÉXICO-CAJA AHORROS",
+    "lat": 38.3384,
+    "lon": -0.50795
+  },
+  {
+    "id": "3123",
+    "n": "IES CAVANILLES",
+    "lat": 38.339,
+    "lon": -0.506901
+  },
+  {
+    "id": "3124",
+    "n": "SOLER-JUZGADOS",
+    "lat": 38.3394,
+    "lon": -0.501144
+  },
+  {
+    "id": "3126",
+    "n": "Ó. ESPLÁ-SEMPERE",
+    "lat": 38.3405,
+    "lon": -0.493647
+  },
+  {
+    "id": "3127",
+    "n": "ALEMANIA",
+    "lat": 38.3426,
+    "lon": -0.489835
+  },
+  {
+    "id": "3128",
+    "n": "LUCEROS",
+    "lat": 38.3459,
+    "lon": -0.490177
+  },
+  {
+    "id": "3129",
+    "n": "MERCADO-EL SABIO",
+    "lat": 38.3472,
+    "lon": -0.487076
+  },
+  {
+    "id": "3130",
+    "n": "EUIPO",
+    "lat": 38.3138,
+    "lon": -0.519612
+  },
+  {
+    "id": "3131",
+    "n": "PARQUE DEL MAR",
+    "lat": 38.333,
+    "lon": -0.505882
+  },
+  {
+    "id": "3132",
+    "n": "Ó. ESPLÁ-SEMPERE",
+    "lat": 38.34,
+    "lon": -0.493526
+  },
+  {
+    "id": "3134",
+    "n": "CASTELLÓ-JASPE",
+    "lat": 38.3733,
+    "lon": -0.486929
+  },
+  {
+    "id": "3135",
+    "n": "MERCADO DE BABEL",
+    "lat": 38.3422,
+    "lon": -0.506506
+  },
+  {
+    "id": "3136",
+    "n": "MERCADO DE BABEL",
+    "lat": 38.342,
+    "lon": -0.506464
+  },
+  {
+    "id": "3137",
+    "n": "URBANOVA-BERTOMEU",
+    "lat": 38.2836,
+    "lon": -0.522254
+  },
+  {
+    "id": "3138",
+    "n": "URBANOVA-LATORRE",
+    "lat": 38.2816,
+    "lon": -0.522756
+  },
+  {
+    "id": "3139",
+    "n": "CIUDAD DE LA LUZ",
+    "lat": 38.3112,
+    "lon": -0.523442
+  },
+  {
+    "id": "3141",
+    "n": "MORENO-ELCHE",
+    "lat": 38.3066,
+    "lon": -0.518737
+  },
+  {
+    "id": "3144",
+    "n": "CIUDAD DE LA LUZ",
+    "lat": 38.3111,
+    "lon": -0.523202
+  },
+  {
+    "id": "3145",
+    "n": "TORMOS",
+    "lat": 38.305,
+    "lon": -0.521352
+  },
+  {
+    "id": "3146",
+    "n": "ELCHE-ORBA",
+    "lat": 38.3037,
+    "lon": -0.521718
+  },
+  {
+    "id": "3147",
+    "n": "LA VIÑA-ORIÓN",
+    "lat": 38.3436,
+    "lon": -0.507944
+  },
+  {
+    "id": "3154",
+    "n": "DESALADORA",
+    "lat": 38.2996,
+    "lon": -0.520986
+  },
+  {
+    "id": "3156",
+    "n": "DESALADORA",
+    "lat": 38.299,
+    "lon": -0.520609
+  },
+  {
+    "id": "3166",
+    "n": "GRAN VIA SUR",
+    "lat": 38.3366,
+    "lon": -0.504455
+  },
+  {
+    "id": "3167",
+    "n": "ROSA CHACEL",
+    "lat": 38.3362,
+    "lon": -0.507522
+  },
+  {
+    "id": "3168",
+    "n": "C. SALUD BABEL",
+    "lat": 38.3411,
+    "lon": -0.507939
+  },
+  {
+    "id": "3169",
+    "n": "HISPANIA",
+    "lat": 38.345,
+    "lon": -0.506489
+  },
+  {
+    "id": "3170",
+    "n": "PRINCESA MERCEDES",
+    "lat": 38.3457,
+    "lon": -0.504932
+  },
+  {
+    "id": "3171",
+    "n": "RECAREDO DE LOS RÍOS",
+    "lat": 38.3499,
+    "lon": -0.505005
+  },
+  {
+    "id": "3172",
+    "n": "A. CEBALLOS",
+    "lat": 38.3494,
+    "lon": -0.506406
+  },
+  {
+    "id": "3173",
+    "n": "PRINCESA MERCEDES",
+    "lat": 38.3457,
+    "lon": -0.504143
+  },
+  {
+    "id": "3174",
+    "n": "ROSA CHACEL",
+    "lat": 38.3361,
+    "lon": -0.506988
+  },
+  {
+    "id": "3222",
+    "n": "EL REBOLLEDO-AUTOVÍA",
+    "lat": 38.3413,
+    "lon": -0.603244
+  },
+  {
+    "id": "3223",
+    "n": "EL REBOLLEDO-GASOLINERA",
+    "lat": 38.3425,
+    "lon": -0.607839
+  },
+  {
+    "id": "3224",
+    "n": "EL REBOLLEDO-GRANADINOS",
+    "lat": 38.3438,
+    "lon": -0.612039
+  },
+  {
+    "id": "3225",
+    "n": "EL REBOLLEDO-CORREOS",
+    "lat": 38.3447,
+    "lon": -0.614458
+  },
+  {
+    "id": "3226",
+    "n": "EL REBOLLEDO-RESTAURANTE",
+    "lat": 38.3458,
+    "lon": -0.61781
+  },
+  {
+    "id": "3227",
+    "n": "EL REBOLLEDO-CORREOS",
+    "lat": 38.3446,
+    "lon": -0.614485
+  },
+  {
+    "id": "3228",
+    "n": "EL REBOLLEDO-GRANADINOS",
+    "lat": 38.3438,
+    "lon": -0.612394
+  },
+  {
+    "id": "3229",
+    "n": "EL REBOLLEDO-GASOLINERA",
+    "lat": 38.342,
+    "lon": -0.606791
+  },
+  {
+    "id": "3230",
+    "n": "EL REBOLLEDO-AUTOVÍA",
+    "lat": 38.3412,
+    "lon": -0.60318
+  },
+  {
+    "id": "3400",
+    "n": "MERCADO-SAN VICENTE",
+    "lat": 38.3488,
+    "lon": -0.48479
+  },
+  {
+    "id": "3500",
+    "n": "SEMPERE-PASTOR",
+    "lat": 38.329,
+    "lon": -0.515823
+  },
+  {
+    "id": "3502",
+    "n": "IES BAHÍA DE BABEL",
+    "lat": 38.3342,
+    "lon": -0.509592
+  },
+  {
+    "id": "3504",
+    "n": "ANTIGUO ASILO",
+    "lat": 38.3427,
+    "lon": -0.5031
+  },
+  {
+    "id": "3506",
+    "n": "LA VIÑA-ORIÓN",
+    "lat": 38.3436,
+    "lon": -0.507588
+  },
+  {
+    "id": "3507",
+    "n": "ISLA DE CORFÚ",
+    "lat": 38.353,
+    "lon": -0.502793
+  },
+  {
+    "id": "3508",
+    "n": "COLEGIO ALTOZANO",
+    "lat": 38.3565,
+    "lon": -0.500075
+  },
+  {
+    "id": "3514",
+    "n": "TEULADA-CONFRIDES",
+    "lat": 38.3638,
+    "lon": -0.499344
+  },
+  {
+    "id": "3515",
+    "n": "TEULADA-LINARES",
+    "lat": 38.3623,
+    "lon": -0.498239
+  },
+  {
+    "id": "3516",
+    "n": "MERCADILLO-GRAN VÍA",
+    "lat": 38.3594,
+    "lon": -0.49802
+  },
+  {
+    "id": "3517",
+    "n": "COLEGIO ALTOZANO",
+    "lat": 38.3564,
+    "lon": -0.500799
+  },
+  {
+    "id": "3518",
+    "n": "ISLA DE CORFÚ",
+    "lat": 38.3529,
+    "lon": -0.503493
+  },
+  {
+    "id": "3521",
+    "n": "ANTIGUO ASILO",
+    "lat": 38.3429,
+    "lon": -0.503196
+  },
+  {
+    "id": "3523",
+    "n": "AGUILERA-LOS DOSCIENTOS",
+    "lat": 38.343,
+    "lon": -0.50157
+  },
+  {
+    "id": "3524",
+    "n": "AGUILERA-LOS DOSCIENTOS",
+    "lat": 38.3429,
+    "lon": -0.501449
+  },
+  {
+    "id": "3525",
+    "n": "SEMPERE-PASTOR",
+    "lat": 38.3291,
+    "lon": -0.51598
+  },
+  {
+    "id": "3526",
+    "n": "MERCADILLO-GRAN VÍA",
+    "lat": 38.3593,
+    "lon": -0.497861
+  },
+  {
+    "id": "3528",
+    "n": "POLIDEPORTIVO SAMARANCH",
+    "lat": 38.3329,
+    "lon": -0.511149
+  },
+  {
+    "id": "3529",
+    "n": "ORIHUELA-LAFORA",
+    "lat": 38.3451,
+    "lon": -0.514504
+  },
+  {
+    "id": "3530",
+    "n": "ORIHUELA-LAFORA",
+    "lat": 38.3451,
+    "lon": -0.514803
+  },
+  {
+    "id": "3550",
+    "n": "BULEVAR DEL PLA (TRAM)",
+    "lat": 38.3588,
+    "lon": -0.472337
+  },
+  {
+    "id": "3551",
+    "n": "C.A. MONTEMAR",
+    "lat": 38.3572,
+    "lon": -0.47642
+  },
+  {
+    "id": "3552",
+    "n": "PLAZA MANILA",
+    "lat": 38.3581,
+    "lon": -0.477316
+  },
+  {
+    "id": "3553",
+    "n": "EL PINOSO",
+    "lat": 38.3595,
+    "lon": -0.482578
+  },
+  {
+    "id": "3554",
+    "n": "GASCUÑANA",
+    "lat": 38.375,
+    "lon": -0.488175
+  },
+  {
+    "id": "3555",
+    "n": "C.P. LUCENTUM",
+    "lat": 38.3749,
+    "lon": -0.493319
+  },
+  {
+    "id": "3556",
+    "n": "PL. ARGEL-BERNÁCER",
+    "lat": 38.3748,
+    "lon": -0.491146
+  },
+  {
+    "id": "3557",
+    "n": "C. SALUD CIUDAD JARDÍN",
+    "lat": 38.3756,
+    "lon": -0.495264
+  },
+  {
+    "id": "3561",
+    "n": "ÁVILA",
+    "lat": 38.3741,
+    "lon": -0.488299
+  },
+  {
+    "id": "3562",
+    "n": "PL. ARGEL-VALLE-INCLÁN",
+    "lat": 38.374,
+    "lon": -0.49153
+  },
+  {
+    "id": "3563",
+    "n": "VALLE-INCLÁN-IGLESIA",
+    "lat": 38.374,
+    "lon": -0.489917
+  },
+  {
+    "id": "3564",
+    "n": "C.P. MANJÓN-CERVANTES",
+    "lat": 38.3571,
+    "lon": -0.481987
+  },
+  {
+    "id": "3566",
+    "n": "C.A. MONTEMAR",
+    "lat": 38.3571,
+    "lon": -0.476332
+  },
+  {
+    "id": "3567",
+    "n": "BULEVAR DEL PLA (TRAM)",
+    "lat": 38.3591,
+    "lon": -0.47155
+  },
+  {
+    "id": "3581",
+    "n": "C.P. LUCENTUM",
+    "lat": 38.3745,
+    "lon": -0.493436
+  },
+  {
+    "id": "3582",
+    "n": "C.P. LA PAZ",
+    "lat": 38.3725,
+    "lon": -0.492942
+  },
+  {
+    "id": "3585",
+    "n": "PADRE ESPLÁ-VIDAL",
+    "lat": 38.3563,
+    "lon": -0.478262
+  },
+  {
+    "id": "3600",
+    "n": "LA CALITA",
+    "lat": 38.3559,
+    "lon": -0.427183
+  },
+  {
+    "id": "3602",
+    "n": "PLAYA HUERTAS",
+    "lat": 38.3628,
+    "lon": -0.412097
+  },
+  {
+    "id": "3608",
+    "n": "PARQUE DEL CABO",
+    "lat": 38.3566,
+    "lon": -0.421905
+  },
+  {
+    "id": "3621",
+    "n": "THE OCEAN RACE MUSEO",
+    "lat": 38.3409,
+    "lon": -0.478681
+  },
+  {
+    "id": "3651",
+    "n": "ELCHE-ANTELLA",
+    "lat": 38.3023,
+    "lon": -0.527367
+  },
+  {
+    "id": "3652",
+    "n": "ELCHE-BENIJÓFAR",
+    "lat": 38.3016,
+    "lon": -0.533166
+  },
+  {
+    "id": "3665",
+    "n": "MORENO-CINE",
+    "lat": 38.3062,
+    "lon": -0.522626
+  },
+  {
+    "id": "3676",
+    "n": "Ó. ESPLÁ-SEMPERE",
+    "lat": 38.3393,
+    "lon": -0.493768
+  },
+  {
+    "id": "3700",
+    "n": "BELANDO 6",
+    "lat": 38.3472,
+    "lon": -0.488827
+  },
+  {
+    "id": "3701",
+    "n": "BELANDO 30",
+    "lat": 38.3485,
+    "lon": -0.489903
+  },
+  {
+    "id": "3702",
+    "n": "M. BARBIERI",
+    "lat": 38.3496,
+    "lon": -0.490668
+  },
+  {
+    "id": "3703",
+    "n": "CIUDAD DEPORTIVA",
+    "lat": 38.3563,
+    "lon": -0.494039
+  },
+  {
+    "id": "3704",
+    "n": "CENTRO DE TECNIFICACIÓN",
+    "lat": 38.3547,
+    "lon": -0.4946
+  },
+  {
+    "id": "3705",
+    "n": "CAMINO DE RONDA",
+    "lat": 38.3553,
+    "lon": -0.492943
+  },
+  {
+    "id": "3706",
+    "n": "CONSERVATORIO",
+    "lat": 38.353,
+    "lon": -0.491306
+  },
+  {
+    "id": "3707",
+    "n": "M. GAZTAMBIDE",
+    "lat": 38.3492,
+    "lon": -0.489503
+  },
+  {
+    "id": "3708",
+    "n": "P. IGLESIAS",
+    "lat": 38.3476,
+    "lon": -0.488378
+  },
+  {
+    "id": "3709",
+    "n": "CONSERVATORIO",
+    "lat": 38.3527,
+    "lon": -0.491074
+  },
+  {
+    "id": "3710",
+    "n": "MARQUÉS DE MOLINS",
+    "lat": 38.3497,
+    "lon": -0.490571
+  },
+  {
+    "id": "3900",
+    "n": "SAN GABRIEL-PLAZA BOTELLA",
+    "lat": 38.3285,
+    "lon": -0.510842
+  },
+  {
+    "id": "3901",
+    "n": "VERGEL",
+    "lat": 38.3302,
+    "lon": -0.509846
+  },
+  {
+    "id": "3902",
+    "n": "ESCOLANO-PEGO",
+    "lat": 38.3301,
+    "lon": -0.511703
+  },
+  {
+    "id": "3903",
+    "n": "ESCOLANO-LOS CINCUENTA",
+    "lat": 38.3296,
+    "lon": -0.512931
+  },
+  {
+    "id": "3904",
+    "n": "DÍAZ DE MENDOZA",
+    "lat": 38.3281,
+    "lon": -0.514996
+  },
+  {
+    "id": "3905",
+    "n": "LA CIGÜEÑA",
+    "lat": 38.3261,
+    "lon": -0.515795
+  },
+  {
+    "id": "3906",
+    "n": "SEMPERE-BLUME",
+    "lat": 38.3272,
+    "lon": -0.517439
+  },
+  {
+    "id": "3907",
+    "n": "SEMPERE-LA ERA",
+    "lat": 38.3303,
+    "lon": -0.514074
+  },
+  {
+    "id": "3908",
+    "n": "C.P. EL PALMERAL",
+    "lat": 38.3314,
+    "lon": -0.512653
+  },
+  {
+    "id": "3909",
+    "n": "ECUADOR",
+    "lat": 38.3323,
+    "lon": -0.509763
+  },
+  {
+    "id": "3910",
+    "n": "PERÚ",
+    "lat": 38.3333,
+    "lon": -0.508081
+  },
+  {
+    "id": "3911",
+    "n": "CFPA BABEL",
+    "lat": 38.3392,
+    "lon": -0.503989
+  },
+  {
+    "id": "3912",
+    "n": "C.P. BENALÚA",
+    "lat": 38.3396,
+    "lon": -0.498141
+  },
+  {
+    "id": "3915",
+    "n": "TEATRO",
+    "lat": 38.3461,
+    "lon": -0.485251
+  },
+  {
+    "id": "3916",
+    "n": "JIJONA-AUDITORIO",
+    "lat": 38.3547,
+    "lon": -0.485321
+  },
+  {
+    "id": "3917",
+    "n": "ALONSO-DEVESA",
+    "lat": 38.3601,
+    "lon": -0.48368
+  },
+  {
+    "id": "3918",
+    "n": "PLAZA ORÁN",
+    "lat": 38.3713,
+    "lon": -0.484984
+  },
+  {
+    "id": "3919",
+    "n": "C. SOCIAL VIRGEN DEL CARMEN",
+    "lat": 38.3703,
+    "lon": -0.483679
+  },
+  {
+    "id": "3920",
+    "n": "PLAZA DE TOROS",
+    "lat": 38.3529,
+    "lon": -0.485291
+  },
+  {
+    "id": "3921",
+    "n": "CARRATALÁ-TOSSALET",
+    "lat": 38.3704,
+    "lon": -0.478046
+  },
+  {
+    "id": "3923",
+    "n": "PINTOR AMORÓS",
+    "lat": 38.3706,
+    "lon": -0.471505
+  },
+  {
+    "id": "3924",
+    "n": "PINTOR CAMACHO",
+    "lat": 38.3725,
+    "lon": -0.474586
+  },
+  {
+    "id": "3925",
+    "n": "C.P. SAN AGUSTÍN",
+    "lat": 38.3719,
+    "lon": -0.474252
+  },
+  {
+    "id": "3926",
+    "n": "CIUDAD ELEGIDA",
+    "lat": 38.3722,
+    "lon": -0.473132
+  },
+  {
+    "id": "3927",
+    "n": "C.P. SAN AGUSTÍN",
+    "lat": 38.372,
+    "lon": -0.474293
+  },
+  {
+    "id": "3928",
+    "n": "PINTOR CAMACHO",
+    "lat": 38.3724,
+    "lon": -0.474462
+  },
+  {
+    "id": "3929",
+    "n": "PINTOR AMORÓS",
+    "lat": 38.3705,
+    "lon": -0.471666
+  },
+  {
+    "id": "3930",
+    "n": "CARRATALÁ-ELS POBLETS",
+    "lat": 38.37,
+    "lon": -0.473906
+  },
+  {
+    "id": "3931",
+    "n": "CARRATALÁ-TOSSALET",
+    "lat": 38.3705,
+    "lon": -0.478067
+  },
+  {
+    "id": "3932",
+    "n": "C.P. EL TOSSALET",
+    "lat": 38.3705,
+    "lon": -0.480651
+  },
+  {
+    "id": "3933",
+    "n": "SIERRA DE PANDOLS",
+    "lat": 38.3708,
+    "lon": -0.481281
+  },
+  {
+    "id": "3934",
+    "n": "STA. CRUZ-BANYERES",
+    "lat": 38.3717,
+    "lon": -0.48235
+  },
+  {
+    "id": "3937",
+    "n": "MERCADO-EL SABIO",
+    "lat": 38.3476,
+    "lon": -0.486664
+  },
+  {
+    "id": "3938",
+    "n": "LUCEROS",
+    "lat": 38.3457,
+    "lon": -0.490837
+  },
+  {
+    "id": "3939",
+    "n": "MUNTANYETA-SOTO",
+    "lat": 38.3439,
+    "lon": -0.489399
+  },
+  {
+    "id": "3940",
+    "n": "PLAZA SÉNECA",
+    "lat": 38.3419,
+    "lon": -0.49003
+  },
+  {
+    "id": "3941",
+    "n": "CASANOVA-CHURRUCA",
+    "lat": 38.3407,
+    "lon": -0.49276
+  },
+  {
+    "id": "3942",
+    "n": "C.P. BENALÚA",
+    "lat": 38.3398,
+    "lon": -0.496921
+  },
+  {
+    "id": "3943",
+    "n": "SOLER-ALBEROLA",
+    "lat": 38.3397,
+    "lon": -0.498779
+  },
+  {
+    "id": "3944",
+    "n": "CFPA BABEL",
+    "lat": 38.3394,
+    "lon": -0.504531
+  },
+  {
+    "id": "3945",
+    "n": "MÉXICO-CAJA AHORROS",
+    "lat": 38.3384,
+    "lon": -0.508191
+  },
+  {
+    "id": "3949",
+    "n": "C.P. EL PALMERAL",
+    "lat": 38.3313,
+    "lon": -0.51293
+  },
+  {
+    "id": "3950",
+    "n": "SEMPERE-LA ERA",
+    "lat": 38.3302,
+    "lon": -0.514398
+  },
+  {
+    "id": "3951",
+    "n": "SEMPERE-BLUME",
+    "lat": 38.3274,
+    "lon": -0.51742
+  },
+  {
+    "id": "3952",
+    "n": "LA CIGÜEÑA",
+    "lat": 38.326,
+    "lon": -0.515763
+  },
+  {
+    "id": "3953",
+    "n": "URB. EL PALMERAL",
+    "lat": 38.3256,
+    "lon": -0.513618
+  },
+  {
+    "id": "3954",
+    "n": "VICTORIA KENT",
+    "lat": 38.3267,
+    "lon": -0.514186
+  },
+  {
+    "id": "3955",
+    "n": "DÍAZ DE MENDOZA",
+    "lat": 38.3282,
+    "lon": -0.514787
+  },
+  {
+    "id": "3956",
+    "n": "PEDREGUER",
+    "lat": 38.3273,
+    "lon": -0.512677
+  },
+  {
+    "id": "3957",
+    "n": "C. SOCIAL VIRGEN DEL CARMEN",
+    "lat": 38.3704,
+    "lon": -0.483678
+  },
+  {
+    "id": "3960",
+    "n": "EJÉRCITOS ESPAÑOLES",
+    "lat": 38.3695,
+    "lon": -0.482862
+  },
+  {
+    "id": "3961",
+    "n": "MÉXICO-ROTONDA",
+    "lat": 38.335,
+    "lon": -0.507415
+  },
+  {
+    "id": "3975",
+    "n": "CARRATALÁ-ELS POBLETS",
+    "lat": 38.37,
+    "lon": -0.475475
+  },
+  {
+    "id": "3976",
+    "n": "LOS MONTESINOS",
+    "lat": 38.3685,
+    "lon": -0.472731
+  },
+  {
+    "id": "4000",
+    "n": "LA FLORIDA-ASTURIAS",
+    "lat": 38.3439,
+    "lon": -0.512235
+  },
+  {
+    "id": "4001",
+    "n": "ANA NAVARRO",
+    "lat": 38.3434,
+    "lon": -0.514174
+  },
+  {
+    "id": "4002",
+    "n": "BETIS FLORIDA",
+    "lat": 38.341,
+    "lon": -0.513811
+  },
+  {
+    "id": "4003",
+    "n": "FLOR",
+    "lat": 38.3395,
+    "lon": -0.513075
+  },
+  {
+    "id": "4004",
+    "n": "IES FIGUERAS-CARBONELL",
+    "lat": 38.3388,
+    "lon": -0.511977
+  },
+  {
+    "id": "4005",
+    "n": "C.P. FLORIDA-CARBONELL",
+    "lat": 38.3389,
+    "lon": -0.509662
+  },
+  {
+    "id": "4009",
+    "n": "PUERTA DEL MAR",
+    "lat": 38.3452,
+    "lon": -0.478817
+  },
+  {
+    "id": "4010",
+    "n": "CELIA VALLS",
+    "lat": 38.3528,
+    "lon": -0.475695
+  },
+  {
+    "id": "4012",
+    "n": "PLAZA ESTELLA",
+    "lat": 38.3552,
+    "lon": -0.475541
+  },
+  {
+    "id": "4013",
+    "n": "ING. CANALES",
+    "lat": 38.3565,
+    "lon": -0.477179
+  },
+  {
+    "id": "4014",
+    "n": "RÍO SERPÍS",
+    "lat": 38.3585,
+    "lon": -0.474604
+  },
+  {
+    "id": "4015",
+    "n": "ALBIÑANA",
+    "lat": 38.3595,
+    "lon": -0.475953
+  },
+  {
+    "id": "4016",
+    "n": "CISNEROS-SAN MATEO",
+    "lat": 38.3601,
+    "lon": -0.477362
+  },
+  {
+    "id": "4017",
+    "n": "CISNEROS-CÁNOVAS",
+    "lat": 38.3606,
+    "lon": -0.478501
+  },
+  {
+    "id": "4018",
+    "n": "SAGRADA FAMILIA",
+    "lat": 38.3611,
+    "lon": -0.478001
+  },
+  {
+    "id": "4019",
+    "n": "E. MONSONÍS",
+    "lat": 38.3605,
+    "lon": -0.476457
+  },
+  {
+    "id": "4020",
+    "n": "LUIS TORREGROSA",
+    "lat": 38.3598,
+    "lon": -0.475519
+  },
+  {
+    "id": "4021",
+    "n": "PÉREZ CÁSCALES",
+    "lat": 38.3583,
+    "lon": -0.475993
+  },
+  {
+    "id": "4022",
+    "n": "G. MENGUAL",
+    "lat": 38.3568,
+    "lon": -0.475006
+  },
+  {
+    "id": "4023",
+    "n": "HOSPITAL PROVINCIAL",
+    "lat": 38.3545,
+    "lon": -0.476345
+  },
+  {
+    "id": "4024",
+    "n": "MARQ-GÓMEZ ULLA",
+    "lat": 38.353,
+    "lon": -0.47698
+  },
+  {
+    "id": "4025",
+    "n": "CANÓNIGO PENALVA",
+    "lat": 38.3522,
+    "lon": -0.474249
+  },
+  {
+    "id": "4027",
+    "n": "RAVAL ROIG",
+    "lat": 38.3498,
+    "lon": -0.473257
+  },
+  {
+    "id": "4028",
+    "n": "C.P. FLORIDA-CARBONELL",
+    "lat": 38.3391,
+    "lon": -0.509724
+  },
+  {
+    "id": "4029",
+    "n": "IES FIGUERAS-CARBONELL",
+    "lat": 38.339,
+    "lon": -0.512073
+  },
+  {
+    "id": "4030",
+    "n": "FLOR",
+    "lat": 38.3394,
+    "lon": -0.512914
+  },
+  {
+    "id": "4031",
+    "n": "BETIS FLORIDA",
+    "lat": 38.3416,
+    "lon": -0.513997
+  },
+  {
+    "id": "4032",
+    "n": "RÉGULO",
+    "lat": 38.3426,
+    "lon": -0.512771
+  },
+  {
+    "id": "4033",
+    "n": "LA VIÑA-COMAS SOLÁ",
+    "lat": 38.3434,
+    "lon": -0.509701
+  },
+  {
+    "id": "4035",
+    "n": "PLAZA MAR 2",
+    "lat": 38.3525,
+    "lon": -0.473541
+  },
+  {
+    "id": "4036",
+    "n": "J. TURINA",
+    "lat": 38.3539,
+    "lon": -0.474626
+  },
+  {
+    "id": "4045",
+    "n": "RAMBLA-SAN JOSÉ",
+    "lat": 38.3452,
+    "lon": -0.483578
+  },
+  {
+    "id": "4046",
+    "n": "LUCEROS-SOTO",
+    "lat": 38.3455,
+    "lon": -0.490134
+  },
+  {
+    "id": "4065",
+    "n": "CANÓNIGO PENALVA",
+    "lat": 38.3525,
+    "lon": -0.474377
+  },
+  {
+    "id": "4067",
+    "n": "PLAZA MAR 2",
+    "lat": 38.3533,
+    "lon": -0.473547
+  },
+  {
+    "id": "4082",
+    "n": "R. ALTAMIRA",
+    "lat": 38.3444,
+    "lon": -0.48278
+  },
+  {
+    "id": "4100",
+    "n": "CIUDAD DE ASÍS",
+    "lat": 38.347,
+    "lon": -0.508513
+  },
+  {
+    "id": "4101",
+    "n": "CEFEO-ANTARES",
+    "lat": 38.3473,
+    "lon": -0.510874
+  },
+  {
+    "id": "4102",
+    "n": "CEFEO-NIÑOLES",
+    "lat": 38.3474,
+    "lon": -0.511992
+  },
+  {
+    "id": "4103",
+    "n": "ORIHUELA-ALBERGUE",
+    "lat": 38.3448,
+    "lon": -0.511772
+  },
+  {
+    "id": "4104",
+    "n": "ORIHUELA-LA LIRA",
+    "lat": 38.3445,
+    "lon": -0.508989
+  },
+  {
+    "id": "4105",
+    "n": "ORIHUELA-GRAN VÍA",
+    "lat": 38.3439,
+    "lon": -0.506539
+  },
+  {
+    "id": "4106",
+    "n": "MERCADO DE BENALÚA",
+    "lat": 38.343,
+    "lon": -0.49831
+  },
+  {
+    "id": "4107",
+    "n": "ESTACIÓN-AGUILERA",
+    "lat": 38.3431,
+    "lon": -0.496361
+  },
+  {
+    "id": "4108",
+    "n": "ESTACIÓN-MAISONNAVE",
+    "lat": 38.3432,
+    "lon": -0.49345
+  },
+  {
+    "id": "4109",
+    "n": "MAISONNAVE-PORTUGAL",
+    "lat": 38.3433,
+    "lon": -0.49148
+  },
+  {
+    "id": "4111",
+    "n": "PLAZA DE TOROS",
+    "lat": 38.3518,
+    "lon": -0.484789
+  },
+  {
+    "id": "4112",
+    "n": "PARQUE REQUENA",
+    "lat": 38.3743,
+    "lon": -0.485108
+  },
+  {
+    "id": "4113",
+    "n": "COLONIA REQUENA - ESMERALDA",
+    "lat": 38.375,
+    "lon": -0.485771
+  },
+  {
+    "id": "4114",
+    "n": "PLAZA DE ESPAÑA",
+    "lat": 38.352,
+    "lon": -0.485403
+  },
+  {
+    "id": "4115",
+    "n": "CALDERÓN-LA LONJA",
+    "lat": 38.3498,
+    "lon": -0.485751
+  },
+  {
+    "id": "4116",
+    "n": "MERCADO-EL SABIO",
+    "lat": 38.3474,
+    "lon": -0.487197
+  },
+  {
+    "id": "4117",
+    "n": "MAISONNAVE-CALVO SOTELO",
+    "lat": 38.3436,
+    "lon": -0.489686
+  },
+  {
+    "id": "4118",
+    "n": "ESTACIÓN-MAISONNAVE",
+    "lat": 38.3434,
+    "lon": -0.493193
+  },
+  {
+    "id": "4119",
+    "n": "ESTACIÓN-AGUILERA",
+    "lat": 38.3432,
+    "lon": -0.49639
+  },
+  {
+    "id": "4120",
+    "n": "MERCADO DE BENALÚA",
+    "lat": 38.3431,
+    "lon": -0.498912
+  },
+  {
+    "id": "4121",
+    "n": "ORIHUELA-GRAN VÍA",
+    "lat": 38.3441,
+    "lon": -0.506679
+  },
+  {
+    "id": "4122",
+    "n": "ORIHUELA-LA LIRA",
+    "lat": 38.3446,
+    "lon": -0.508973
+  },
+  {
+    "id": "4123",
+    "n": "ORIHUELA-ALBERGUE",
+    "lat": 38.3449,
+    "lon": -0.511858
+  },
+  {
+    "id": "4124",
+    "n": "ORIHUELA-NIÑOLES",
+    "lat": 38.3451,
+    "lon": -0.513523
+  },
+  {
+    "id": "4125",
+    "n": "DE LA SERNA",
+    "lat": 38.3465,
+    "lon": -0.51622
+  },
+  {
+    "id": "4128",
+    "n": "XIMÉNEZ-LANGUCHA",
+    "lat": 38.3484,
+    "lon": -0.51285
+  },
+  {
+    "id": "4129",
+    "n": "XIMÉNEZ-HÉRCULES",
+    "lat": 38.3482,
+    "lon": -0.511275
+  },
+  {
+    "id": "4130",
+    "n": "XIMÉNEZ-CRUZ DEL SUR",
+    "lat": 38.3481,
+    "lon": -0.509655
+  },
+  {
+    "id": "4133",
+    "n": "ÁGUILA",
+    "lat": 38.3482,
+    "lon": -0.514813
+  },
+  {
+    "id": "4142",
+    "n": "VILLA DE CHIVA",
+    "lat": 38.3733,
+    "lon": -0.488006
+  },
+  {
+    "id": "4145",
+    "n": "GASTÓN CASTELLÓ (TRAM)",
+    "lat": 38.3736,
+    "lon": -0.486552
+  },
+  {
+    "id": "4197",
+    "n": "LA LUNA-TANATORIO",
+    "lat": 38.3451,
+    "lon": -0.525021
+  },
+  {
+    "id": "4198",
+    "n": "LA LUNA-TANATORIO",
+    "lat": 38.3453,
+    "lon": -0.524396
+  },
+  {
+    "id": "4200",
+    "n": "CEMENTERIO",
+    "lat": 38.3536,
+    "lon": -0.530293
+  },
+  {
+    "id": "4201",
+    "n": "MINA",
+    "lat": 38.3514,
+    "lon": -0.528913
+  },
+  {
+    "id": "4202",
+    "n": "CHAPA",
+    "lat": 38.3493,
+    "lon": -0.527601
+  },
+  {
+    "id": "4203",
+    "n": "TURIA",
+    "lat": 38.3471,
+    "lon": -0.524241
+  },
+  {
+    "id": "4205",
+    "n": "OCAÑA-JÚCAR",
+    "lat": 38.3448,
+    "lon": -0.52146
+  },
+  {
+    "id": "4206",
+    "n": "PERICOCO",
+    "lat": 38.3452,
+    "lon": -0.516689
+  },
+  {
+    "id": "4208",
+    "n": "IES FIGUERAS-CHÁVARRI",
+    "lat": 38.3404,
+    "lon": -0.511784
+  },
+  {
+    "id": "4209",
+    "n": "C. SALUD BABEL",
+    "lat": 38.3411,
+    "lon": -0.509368
+  },
+  {
+    "id": "4213",
+    "n": "AGUILERA-JUZGADOS",
+    "lat": 38.3428,
+    "lon": -0.502022
+  },
+  {
+    "id": "4214",
+    "n": "ESTACIÓN-AVENIDA",
+    "lat": 38.3444,
+    "lon": -0.494313
+  },
+  {
+    "id": "4215",
+    "n": "PLAZA AMÉRICA",
+    "lat": 38.3595,
+    "lon": -0.485346
+  },
+  {
+    "id": "4216",
+    "n": "HOSPITAL-PINTOR BAEZA",
+    "lat": 38.3625,
+    "lon": -0.4872
+  },
+  {
+    "id": "4217",
+    "n": "GRAN VÍA-NOVELDA",
+    "lat": 38.3627,
+    "lon": -0.492114
+  },
+  {
+    "id": "4218",
+    "n": "GRAN VÍA-TEULADA",
+    "lat": 38.3613,
+    "lon": -0.495275
+  },
+  {
+    "id": "4220",
+    "n": "PARQUE SAN AGUSTÍN",
+    "lat": 38.3622,
+    "lon": -0.500189
+  },
+  {
+    "id": "4223",
+    "n": "RUÍZ DE ALARCÓN",
+    "lat": 38.367,
+    "lon": -0.505973
+  },
+  {
+    "id": "4224",
+    "n": "FONDO DE PIQUERES",
+    "lat": 38.3694,
+    "lon": -0.505755
+  },
+  {
+    "id": "4225",
+    "n": "C.P. EUSEBIO SEMPERE",
+    "lat": 38.3713,
+    "lon": -0.503755
+  },
+  {
+    "id": "4226",
+    "n": "DIVINA PASTORA",
+    "lat": 38.3726,
+    "lon": -0.502816
+  },
+  {
+    "id": "4228",
+    "n": "V. DEL PUIG-IGLESIA",
+    "lat": 38.3684,
+    "lon": -0.499149
+  },
+  {
+    "id": "4229",
+    "n": "C. SOCIAL TÓMBOLA",
+    "lat": 38.3668,
+    "lon": -0.498658
+  },
+  {
+    "id": "4232",
+    "n": "TÓMBOLA-V. DEL PUIG",
+    "lat": 38.3708,
+    "lon": -0.49995
+  },
+  {
+    "id": "4233",
+    "n": "NÚÑEZ DE BALBOA",
+    "lat": 38.3724,
+    "lon": -0.500948
+  },
+  {
+    "id": "4234",
+    "n": "DIVINA PASTORA",
+    "lat": 38.3727,
+    "lon": -0.50216
+  },
+  {
+    "id": "4235",
+    "n": "CÁDIZ-I. SEVILLA",
+    "lat": 38.3727,
+    "lon": -0.503708
+  },
+  {
+    "id": "4236",
+    "n": "C.P. EUSEBIO SEMPERE",
+    "lat": 38.3711,
+    "lon": -0.503818
+  },
+  {
+    "id": "4237",
+    "n": "FONDO DE PIQUERES",
+    "lat": 38.3697,
+    "lon": -0.504943
+  },
+  {
+    "id": "4239",
+    "n": "RECASENS-PETANCA",
+    "lat": 38.368,
+    "lon": -0.506949
+  },
+  {
+    "id": "4240",
+    "n": "CINCO SOLES",
+    "lat": 38.3665,
+    "lon": -0.506265
+  },
+  {
+    "id": "4241",
+    "n": "LA PÉRGOLA",
+    "lat": 38.3651,
+    "lon": -0.505673
+  },
+  {
+    "id": "4242",
+    "n": "LA NUCÍA-LEGAZPI",
+    "lat": 38.3613,
+    "lon": -0.501671
+  },
+  {
+    "id": "4248",
+    "n": "HOSPITAL-PINTOR BAEZA",
+    "lat": 38.3626,
+    "lon": -0.487517
+  },
+  {
+    "id": "4249",
+    "n": "PLAZA AMÉRICA",
+    "lat": 38.3597,
+    "lon": -0.485868
+  },
+  {
+    "id": "4250",
+    "n": "AMÉRICA-SEGARRA",
+    "lat": 38.3584,
+    "lon": -0.485317
+  },
+  {
+    "id": "4255",
+    "n": "BOTÁNICO",
+    "lat": 38.3442,
+    "lon": -0.505832
+  },
+  {
+    "id": "4256",
+    "n": "C. SALUD BABEL",
+    "lat": 38.341,
+    "lon": -0.508238
+  },
+  {
+    "id": "4259",
+    "n": "PERICOCO",
+    "lat": 38.3453,
+    "lon": -0.516822
+  },
+  {
+    "id": "4260",
+    "n": "OCAÑA-JÚCAR",
+    "lat": 38.345,
+    "lon": -0.522393
+  },
+  {
+    "id": "4264",
+    "n": "LUCEROS-SOTO",
+    "lat": 38.3449,
+    "lon": -0.49012
+  },
+  {
+    "id": "4265",
+    "n": "GRAN VÍA-TEULADA",
+    "lat": 38.3609,
+    "lon": -0.495552
+  },
+  {
+    "id": "4268",
+    "n": "C. SALUD BABEL",
+    "lat": 38.3418,
+    "lon": -0.508728
+  },
+  {
+    "id": "4269",
+    "n": "IES FIGUERAS-AZORÍN",
+    "lat": 38.341,
+    "lon": -0.512082
+  },
+  {
+    "id": "4273",
+    "n": "DIPUTACIÓN",
+    "lat": 38.3455,
+    "lon": -0.492034
+  },
+  {
+    "id": "4277",
+    "n": "M. DE REAL",
+    "lat": 38.3485,
+    "lon": -0.526244
+  },
+  {
+    "id": "4280",
+    "n": "GRAN VÍA-NOVELDA",
+    "lat": 38.3621,
+    "lon": -0.493451
+  },
+  {
+    "id": "4281",
+    "n": "LA NUCÍA-LEGAZPI",
+    "lat": 38.3612,
+    "lon": -0.502018
+  },
+  {
+    "id": "4282",
+    "n": "VÍA PARQUE-CONFRIDES",
+    "lat": 38.3631,
+    "lon": -0.50295
+  },
+  {
+    "id": "4283",
+    "n": "VÍA PARQUE-TUBERÍA",
+    "lat": 38.3642,
+    "lon": -0.500761
+  },
+  {
+    "id": "4284",
+    "n": "GRAN VÍA-NOVELDA",
+    "lat": 38.3619,
+    "lon": -0.493193
+  },
+  {
+    "id": "4285",
+    "n": "A. GUIXOT",
+    "lat": 38.3634,
+    "lon": -0.48917
+  },
+  {
+    "id": "4287",
+    "n": "VÍA PARQUE-NOVELDA",
+    "lat": 38.367,
+    "lon": -0.497264
+  },
+  {
+    "id": "4294",
+    "n": "LA NUCÍA-TEULADA",
+    "lat": 38.3629,
+    "lon": -0.498472
+  },
+  {
+    "id": "4298",
+    "n": "NUEVO CEMENTERIO",
+    "lat": 38.3532,
+    "lon": -0.528542
+  },
+  {
+    "id": "4299",
+    "n": "SAMARITANA",
+    "lat": 38.3491,
+    "lon": -0.525147
+  },
+  {
+    "id": "4300",
+    "n": "PUERTA DEL MAR",
+    "lat": 38.3443,
+    "lon": -0.479477
+  },
+  {
+    "id": "4301",
+    "n": "ESTACIÓN-CORREOS",
+    "lat": 38.346,
+    "lon": -0.494293
+  },
+  {
+    "id": "4306",
+    "n": "C. SALUD SAN BLAS",
+    "lat": 38.3494,
+    "lon": -0.500868
+  },
+  {
+    "id": "4308",
+    "n": "RAYUELA",
+    "lat": 38.3518,
+    "lon": -0.500604
+  },
+  {
+    "id": "4309",
+    "n": "SAN ESTEBAN",
+    "lat": 38.3533,
+    "lon": -0.500586
+  },
+  {
+    "id": "4310",
+    "n": "C.P. SAN FERNANDO",
+    "lat": 38.3546,
+    "lon": -0.499168
+  },
+  {
+    "id": "4311",
+    "n": "RICO-HONDÓN",
+    "lat": 38.3556,
+    "lon": -0.497292
+  },
+  {
+    "id": "4312",
+    "n": "HOGUERA SAN BLAS",
+    "lat": 38.3569,
+    "lon": -0.496915
+  },
+  {
+    "id": "4313",
+    "n": "HOGUERA SAN BLAS",
+    "lat": 38.3567,
+    "lon": -0.497244
+  },
+  {
+    "id": "4314",
+    "n": "C.P. SAN FERNANDO",
+    "lat": 38.3547,
+    "lon": -0.499199
+  },
+  {
+    "id": "4315",
+    "n": "SAN ESTEBAN",
+    "lat": 38.3533,
+    "lon": -0.500689
+  },
+  {
+    "id": "4316",
+    "n": "RAYUELA",
+    "lat": 38.3516,
+    "lon": -0.500702
+  },
+  {
+    "id": "4317",
+    "n": "URB. SANTO DOMINGO",
+    "lat": 38.3505,
+    "lon": -0.501735
+  },
+  {
+    "id": "4318",
+    "n": "C. SALUD SAN BLAS",
+    "lat": 38.3492,
+    "lon": -0.500943
+  },
+  {
+    "id": "4319",
+    "n": "LA COLMENA",
+    "lat": 38.3485,
+    "lon": -0.498851
+  },
+  {
+    "id": "4320",
+    "n": "C.P. SOROLLA",
+    "lat": 38.3502,
+    "lon": -0.497192
+  },
+  {
+    "id": "4321",
+    "n": "SAN JUAN BAUTISTA",
+    "lat": 38.3492,
+    "lon": -0.496402
+  },
+  {
+    "id": "4322",
+    "n": "GISBERT-STA. LEONOR",
+    "lat": 38.348,
+    "lon": -0.495447
+  },
+  {
+    "id": "4323",
+    "n": "BELLUGA",
+    "lat": 38.3471,
+    "lon": -0.494609
+  },
+  {
+    "id": "4325",
+    "n": "ESTACIÓN-CORREOS",
+    "lat": 38.3452,
+    "lon": -0.49463
+  },
+  {
+    "id": "4329",
+    "n": "FERNÁNDEZ-FOGUERES",
+    "lat": 38.3571,
+    "lon": -0.502984
+  },
+  {
+    "id": "4330",
+    "n": "FERNÁNDEZ-MOROS Y CRISTIANOS",
+    "lat": 38.3585,
+    "lon": -0.505787
+  },
+  {
+    "id": "4331",
+    "n": "CIUDAD DE MATANZAS",
+    "lat": 38.3591,
+    "lon": -0.505663
+  },
+  {
+    "id": "4332",
+    "n": "PLAZA JUAN PABLO II",
+    "lat": 38.3545,
+    "lon": -0.510787
+  },
+  {
+    "id": "4333",
+    "n": "CIUDAD DE MATANZAS",
+    "lat": 38.359,
+    "lon": -0.505836
+  },
+  {
+    "id": "4334",
+    "n": "FERNÁNDEZ-MOROS Y CRISTIANOS",
+    "lat": 38.3583,
+    "lon": -0.505882
+  },
+  {
+    "id": "4337",
+    "n": "MARISTAS",
+    "lat": 38.3555,
+    "lon": -0.503073
+  },
+  {
+    "id": "4339",
+    "n": "FERNÁNDEZ-FOGUERES",
+    "lat": 38.357,
+    "lon": -0.503078
+  },
+  {
+    "id": "4340",
+    "n": "MERCADILLO-MIRRA",
+    "lat": 38.3582,
+    "lon": -0.497476
+  },
+  {
+    "id": "4346",
+    "n": "SAN AGUSTÍN",
+    "lat": 38.3622,
+    "lon": -0.500567
+  },
+  {
+    "id": "4348",
+    "n": "IES 8 DE MARZO",
+    "lat": 38.3608,
+    "lon": -0.502959
+  },
+  {
+    "id": "4354",
+    "n": "MERCADILLO-MIRRA",
+    "lat": 38.3581,
+    "lon": -0.497902
+  },
+  {
+    "id": "4355",
+    "n": "IES 8 DE MARZO",
+    "lat": 38.3608,
+    "lon": -0.502766
+  },
+  {
+    "id": "4358",
+    "n": "RICO-IGLESIA",
+    "lat": 38.3514,
+    "lon": -0.496979
+  },
+  {
+    "id": "4359",
+    "n": "PUERTA DEL MAR",
+    "lat": 38.3448,
+    "lon": -0.479768
+  },
+  {
+    "id": "4360",
+    "n": "CARMELITAS",
+    "lat": 38.3616,
+    "lon": -0.5026
+  },
+  {
+    "id": "4363",
+    "n": "GISBERT-ALCALÁ",
+    "lat": 38.3478,
+    "lon": -0.49812
+  },
+  {
+    "id": "4400",
+    "n": "MERCADO-SAN VICENTE",
+    "lat": 38.349,
+    "lon": -0.484762
+  },
+  {
+    "id": "4401",
+    "n": "MISERICORDIA",
+    "lat": 38.3522,
+    "lon": -0.483495
+  },
+  {
+    "id": "4402",
+    "n": "CIGARRERAS",
+    "lat": 38.3537,
+    "lon": -0.481395
+  },
+  {
+    "id": "4403",
+    "n": "PÍO XII",
+    "lat": 38.3554,
+    "lon": -0.479904
+  },
+  {
+    "id": "4404",
+    "n": "C.P. 9 DE OCTUBRE",
+    "lat": 38.3593,
+    "lon": -0.479839
+  },
+  {
+    "id": "4405",
+    "n": "POLIDEPORTIVO CAROLINAS",
+    "lat": 38.362,
+    "lon": -0.479986
+  },
+  {
+    "id": "4406",
+    "n": "GARBINET (TRAM)",
+    "lat": 38.3632,
+    "lon": -0.479519
+  },
+  {
+    "id": "4407",
+    "n": "CANO-GRAN VÍA",
+    "lat": 38.3655,
+    "lon": -0.47983
+  },
+  {
+    "id": "4408",
+    "n": "CANO-VÍA PARQUE",
+    "lat": 38.3675,
+    "lon": -0.480471
+  },
+  {
+    "id": "4409",
+    "n": "CANO-IES GRAN VÍA",
+    "lat": 38.37,
+    "lon": -0.481023
+  },
+  {
+    "id": "4410",
+    "n": "C.P. EL TOSSALET",
+    "lat": 38.3709,
+    "lon": -0.480181
+  },
+  {
+    "id": "4411",
+    "n": "EDIFICIO GARBINET",
+    "lat": 38.3716,
+    "lon": -0.478438
+  },
+  {
+    "id": "4412",
+    "n": "C. SALUD JUAN XXIII",
+    "lat": 38.3737,
+    "lon": -0.478571
+  },
+  {
+    "id": "4413",
+    "n": "MELILLA-BENIGEMBLA",
+    "lat": 38.3732,
+    "lon": -0.480055
+  },
+  {
+    "id": "4414",
+    "n": "MELILLA-BENIFATO",
+    "lat": 38.3736,
+    "lon": -0.482592
+  },
+  {
+    "id": "4415",
+    "n": "JUAN XXIII-BAS MINGOT",
+    "lat": 38.3747,
+    "lon": -0.483401
+  },
+  {
+    "id": "4416",
+    "n": "BAS MINGOT-PLAZA",
+    "lat": 38.3746,
+    "lon": -0.481287
+  },
+  {
+    "id": "4417",
+    "n": "C. SOCIAL JUAN XXIII",
+    "lat": 38.3761,
+    "lon": -0.481602
+  },
+  {
+    "id": "4418",
+    "n": "LAS LOMAS",
+    "lat": 38.3772,
+    "lon": -0.48336
+  },
+  {
+    "id": "4419",
+    "n": "TURQUESA",
+    "lat": 38.3766,
+    "lon": -0.485121
+  },
+  {
+    "id": "4420",
+    "n": "COLONIA REQUENA-RUBÍ",
+    "lat": 38.3753,
+    "lon": -0.485546
+  },
+  {
+    "id": "4421",
+    "n": "TURQUESA",
+    "lat": 38.3764,
+    "lon": -0.485001
+  },
+  {
+    "id": "4422",
+    "n": "LAS LOMAS",
+    "lat": 38.3769,
+    "lon": -0.483166
+  },
+  {
+    "id": "4423",
+    "n": "C. SOCIAL JUAN XXIII",
+    "lat": 38.376,
+    "lon": -0.481662
+  },
+  {
+    "id": "4424",
+    "n": "BAS MINGOT-GRANADOS",
+    "lat": 38.3746,
+    "lon": -0.480064
+  },
+  {
+    "id": "4425",
+    "n": "C. SALUD JUAN XXIII",
+    "lat": 38.374,
+    "lon": -0.478835
+  },
+  {
+    "id": "4426",
+    "n": "EDIFICIO GARBINET",
+    "lat": 38.3714,
+    "lon": -0.478673
+  },
+  {
+    "id": "4427",
+    "n": "SIERRA DE CAVALLS",
+    "lat": 38.3703,
+    "lon": -0.482662
+  },
+  {
+    "id": "4428",
+    "n": "C. DEPORTIVO V. DEL CARMEN",
+    "lat": 38.3684,
+    "lon": -0.483482
+  },
+  {
+    "id": "4429",
+    "n": "ESPARTERO",
+    "lat": 38.3659,
+    "lon": -0.483216
+  },
+  {
+    "id": "4430",
+    "n": "C.P. ARNICHES",
+    "lat": 38.3648,
+    "lon": -0.480233
+  },
+  {
+    "id": "4431",
+    "n": "GARBINET (TRAM)",
+    "lat": 38.3628,
+    "lon": -0.480002
+  },
+  {
+    "id": "4432",
+    "n": "SAN MATEO-LÉRIDA",
+    "lat": 38.3604,
+    "lon": -0.476893
+  },
+  {
+    "id": "4433",
+    "n": "SAN MATEO-FOGUERER",
+    "lat": 38.359,
+    "lon": -0.477824
+  },
+  {
+    "id": "4434",
+    "n": "MERCADO DE CAROLINAS",
+    "lat": 38.3578,
+    "lon": -0.478644
+  },
+  {
+    "id": "4435",
+    "n": "PÍO XII",
+    "lat": 38.3558,
+    "lon": -0.480007
+  },
+  {
+    "id": "4436",
+    "n": "PALMERETES",
+    "lat": 38.3553,
+    "lon": -0.482414
+  },
+  {
+    "id": "4437",
+    "n": "MISERICORDIA",
+    "lat": 38.352,
+    "lon": -0.483786
+  },
+  {
+    "id": "4438",
+    "n": "CALDERÓN-PL. ESPAÑA",
+    "lat": 38.3508,
+    "lon": -0.485487
+  },
+  {
+    "id": "4445",
+    "n": "MUNTANYETA-SOTO",
+    "lat": 38.3447,
+    "lon": -0.489442
+  },
+  {
+    "id": "4446",
+    "n": "CAPUCHINOS",
+    "lat": 38.3417,
+    "lon": -0.491902
+  },
+  {
+    "id": "4450",
+    "n": "ESTACIÓN DE AUTOBUSES",
+    "lat": 38.3371,
+    "lon": -0.49182
+  },
+  {
+    "id": "4499",
+    "n": "LÓPEZ TORREGROSA",
+    "lat": 38.3473,
+    "lon": -0.48514
+  },
+  {
+    "id": "4501",
+    "n": "MAISONNAVE-CALVO SOTELO",
+    "lat": 38.3436,
+    "lon": -0.489526
+  },
+  {
+    "id": "4502",
+    "n": "PLA DE L'ESPARTAL",
+    "lat": 38.3446,
+    "lon": -0.527337
+  },
+  {
+    "id": "4503",
+    "n": "MERCALICANTE",
+    "lat": 38.344,
+    "lon": -0.537484
+  },
+  {
+    "id": "4504",
+    "n": "CARRETERA DE BACAROT",
+    "lat": 38.3435,
+    "lon": -0.543528
+  },
+  {
+    "id": "4505",
+    "n": "PLA VALLONGA-ITV",
+    "lat": 38.3482,
+    "lon": -0.552054
+  },
+  {
+    "id": "4506",
+    "n": "PLA VALLONGA-ALISIOS",
+    "lat": 38.3501,
+    "lon": -0.552643
+  },
+  {
+    "id": "4507",
+    "n": "PLA VALLONGA-TRUENO",
+    "lat": 38.351,
+    "lon": -0.554878
+  },
+  {
+    "id": "4508",
+    "n": "CENTRO PENITENCIARIO",
+    "lat": 38.3489,
+    "lon": -0.561346
+  },
+  {
+    "id": "4509",
+    "n": "ATALAYAS-PESETA",
+    "lat": 38.3422,
+    "lon": -0.56435
+  },
+  {
+    "id": "4510",
+    "n": "ATALAYAS-EURO P9",
+    "lat": 38.3399,
+    "lon": -0.572365
+  },
+  {
+    "id": "4511",
+    "n": "ATALAYAS-EURO P1",
+    "lat": 38.338,
+    "lon": -0.572431
+  },
+  {
+    "id": "4512",
+    "n": "ATALAYAS-LIBRA",
+    "lat": 38.3378,
+    "lon": -0.564783
+  },
+  {
+    "id": "4513",
+    "n": "LO XEPERUT",
+    "lat": 38.3385,
+    "lon": -0.598624
+  },
+  {
+    "id": "4517",
+    "n": "ATALAYAS-PESETA",
+    "lat": 38.3422,
+    "lon": -0.564167
+  },
+  {
+    "id": "4520",
+    "n": "PLA VALLONGA-BONANZA",
+    "lat": 38.3479,
+    "lon": -0.552557
+  },
+  {
+    "id": "4521",
+    "n": "CENTRO PENITENCIARIO",
+    "lat": 38.3489,
+    "lon": -0.561209
+  },
+  {
+    "id": "4522",
+    "n": "CARRETERA DE BACAROT",
+    "lat": 38.3434,
+    "lon": -0.543532
+  },
+  {
+    "id": "4523",
+    "n": "MERCALICANTE",
+    "lat": 38.3437,
+    "lon": -0.538315
+  },
+  {
+    "id": "4524",
+    "n": "PLA DE L'ESPARTAL",
+    "lat": 38.3444,
+    "lon": -0.528432
+  },
+  {
+    "id": "4526",
+    "n": "ESTACIÓN-AGUILERA",
+    "lat": 38.3433,
+    "lon": -0.495461
+  },
+  {
+    "id": "4600",
+    "n": "RAMBLA-SAN JOSÉ",
+    "lat": 38.3454,
+    "lon": -0.483741
+  },
+  {
+    "id": "4602",
+    "n": "PLAZA MEDITERRÁNEO",
+    "lat": 38.3688,
+    "lon": -0.492498
+  },
+  {
+    "id": "4603",
+    "n": "PARQUE LO MORANT",
+    "lat": 38.3679,
+    "lon": -0.491637
+  },
+  {
+    "id": "4604",
+    "n": "C.P. LO MORANT",
+    "lat": 38.371,
+    "lon": -0.492802
+  },
+  {
+    "id": "4606",
+    "n": "LUGO",
+    "lat": 38.3719,
+    "lon": -0.489552
+  },
+  {
+    "id": "4607",
+    "n": "PABLO NERUDA",
+    "lat": 38.3716,
+    "lon": -0.49183
+  },
+  {
+    "id": "4609",
+    "n": "C.P. VIRGEN DEL REMEDIO",
+    "lat": 38.3712,
+    "lon": -0.486888
+  },
+  {
+    "id": "4621",
+    "n": "C.P. LA PAZ",
+    "lat": 38.373,
+    "lon": -0.4928
+  },
+  {
+    "id": "4630",
+    "n": "POLICÍA LOCAL BENISAUDET",
+    "lat": 38.3652,
+    "lon": -0.490185
+  },
+  {
+    "id": "4652",
+    "n": "CIUDAD JARDÍN (TRAM)",
+    "lat": 38.376,
+    "lon": -0.497402
+  },
+  {
+    "id": "4655",
+    "n": "CÁDIZ-NOVELDA",
+    "lat": 38.3729,
+    "lon": -0.498629
+  },
+  {
+    "id": "4700",
+    "n": "LA OLIVERA",
+    "lat": 38.3579,
+    "lon": -0.474417
+  },
+  {
+    "id": "4703",
+    "n": "ALBUFERETA-EL GRECO",
+    "lat": 38.365,
+    "lon": -0.458939
+  },
+  {
+    "id": "4704",
+    "n": "ALBUFERETA-SERRA GROSSA",
+    "lat": 38.365,
+    "lon": -0.453742
+  },
+  {
+    "id": "4705",
+    "n": "LA ISLETA (TRAM)",
+    "lat": 38.3633,
+    "lon": -0.44823
+  },
+  {
+    "id": "4711",
+    "n": "V. RAMOS-PASTOR",
+    "lat": 38.3666,
+    "lon": -0.427125
+  },
+  {
+    "id": "4716",
+    "n": "LA MARJAL",
+    "lat": 38.3764,
+    "lon": -0.419829
+  },
+  {
+    "id": "4717",
+    "n": "CONDOMINA (TRAM)",
+    "lat": 38.3747,
+    "lon": -0.426002
+  },
+  {
+    "id": "4718",
+    "n": "PARQUE DE BOMBEROS",
+    "lat": 38.3719,
+    "lon": -0.433699
+  },
+  {
+    "id": "4727",
+    "n": "V. RAMOS-PASTOR",
+    "lat": 38.367,
+    "lon": -0.427843
+  },
+  {
+    "id": "4728",
+    "n": "SERGIO CARDELL (TRAM)",
+    "lat": 38.3654,
+    "lon": -0.432487
+  },
+  {
+    "id": "4729",
+    "n": "MIRIAM BLASCO (TRAM)",
+    "lat": 38.3685,
+    "lon": -0.434873
+  },
+  {
+    "id": "4730",
+    "n": "TORRE SARRIÓ",
+    "lat": 38.3698,
+    "lon": -0.435892
+  },
+  {
+    "id": "4731",
+    "n": "OLIMPO",
+    "lat": 38.3687,
+    "lon": -0.436468
+  },
+  {
+    "id": "4734",
+    "n": "C.P. LA ALBUFERETA",
+    "lat": 38.365,
+    "lon": -0.436462
+  },
+  {
+    "id": "4735",
+    "n": "ALBUFERETA-EL GRECO",
+    "lat": 38.3651,
+    "lon": -0.454127
+  },
+  {
+    "id": "4736",
+    "n": "ALBUFERETA-EL GRECO",
+    "lat": 38.3651,
+    "lon": -0.458626
+  },
+  {
+    "id": "4738",
+    "n": "LA OLIVERA",
+    "lat": 38.3579,
+    "lon": -0.474749
+  },
+  {
+    "id": "4743",
+    "n": "JUAN MATOS",
+    "lat": 38.3642,
+    "lon": -0.433925
+  },
+  {
+    "id": "4749",
+    "n": "RÓMULO",
+    "lat": 38.367,
+    "lon": -0.438164
+  },
+  {
+    "id": "4751",
+    "n": "V. RAMOS-ANSALDO",
+    "lat": 38.3654,
+    "lon": -0.430063
+  },
+  {
+    "id": "4752",
+    "n": "V. RAMOS-RIGUAL",
+    "lat": 38.3678,
+    "lon": -0.422354
+  },
+  {
+    "id": "4755",
+    "n": "IGLESIA DE SANTIAGO",
+    "lat": 38.3629,
+    "lon": -0.437041
+  },
+  {
+    "id": "4758",
+    "n": "V. RAMOS-RIGUAL",
+    "lat": 38.3683,
+    "lon": -0.422656
+  },
+  {
+    "id": "4759",
+    "n": "NACIONES-HOLANDA (TRAM)",
+    "lat": 38.3696,
+    "lon": -0.419738
+  },
+  {
+    "id": "4760",
+    "n": "ESTACIÓN-Ó. ESPLÁ",
+    "lat": 38.3427,
+    "lon": -0.494453
+  },
+  {
+    "id": "4761",
+    "n": "IES EL PLA",
+    "lat": 38.3622,
+    "lon": -0.468259
+  },
+  {
+    "id": "4762",
+    "n": "NACIONES-HOLANDA (TRAM)",
+    "lat": 38.3686,
+    "lon": -0.420381
+  },
+  {
+    "id": "4800",
+    "n": "IES JAIME II",
+    "lat": 38.3623,
+    "lon": -0.470512
+  },
+  {
+    "id": "4801",
+    "n": "CRISTÓBAL PARDO",
+    "lat": 38.363,
+    "lon": -0.472157
+  },
+  {
+    "id": "4802",
+    "n": "V. REYES",
+    "lat": 38.3648,
+    "lon": -0.472106
+  },
+  {
+    "id": "4803",
+    "n": "C.C. GRAN VÍA",
+    "lat": 38.3666,
+    "lon": -0.471081
+  },
+  {
+    "id": "4804",
+    "n": "COCHERAS",
+    "lat": 38.3658,
+    "lon": -0.477861
+  },
+  {
+    "id": "4805",
+    "n": "COCHERAS",
+    "lat": 38.3654,
+    "lon": -0.477819
+  },
+  {
+    "id": "4806",
+    "n": "V. REYES",
+    "lat": 38.3649,
+    "lon": -0.47232
+  },
+  {
+    "id": "4808",
+    "n": "CRISTÓBAL PARDO",
+    "lat": 38.3628,
+    "lon": -0.472187
+  },
+  {
+    "id": "4809",
+    "n": "IES JAIME II",
+    "lat": 38.3622,
+    "lon": -0.470538
+  },
+  {
+    "id": "4810",
+    "n": "BARRIO OBRERO",
+    "lat": 38.3603,
+    "lon": -0.46954
+  },
+  {
+    "id": "4811",
+    "n": "BARRIO OBRERO",
+    "lat": 38.3606,
+    "lon": -0.469494
+  },
+  {
+    "id": "4812",
+    "n": "BELLEA DEL FOC",
+    "lat": 38.3676,
+    "lon": -0.471356
+  },
+  {
+    "id": "4814",
+    "n": "BELLEA DEL FOC",
+    "lat": 38.3676,
+    "lon": -0.471459
+  },
+  {
+    "id": "4815",
+    "n": "SIDI-IFNI",
+    "lat": 38.3652,
+    "lon": -0.482918
+  },
+  {
+    "id": "4816",
+    "n": "SIDI-IFNI",
+    "lat": 38.3651,
+    "lon": -0.482786
+  },
+  {
+    "id": "4901",
+    "n": "COLONIA REQUENA-RUBÍ",
+    "lat": 38.3755,
+    "lon": -0.485367
+  },
+  {
+    "id": "4902",
+    "n": "C.C. GRAN VÍA",
+    "lat": 38.3656,
+    "lon": -0.471322
+  },
+  {
+    "id": "4903",
+    "n": "XAVIER SOLER",
+    "lat": 38.3624,
+    "lon": -0.466695
+  },
+  {
+    "id": "4904",
+    "n": "XAVIER SOLER",
+    "lat": 38.3628,
+    "lon": -0.466362
+  },
+  {
+    "id": "4905",
+    "n": "BAS MINGOT-GRANADOS",
+    "lat": 38.3747,
+    "lon": -0.479545
+  },
+  {
+    "id": "4906",
+    "n": "C.P. LO MORANT",
+    "lat": 38.3704,
+    "lon": -0.49282
+  },
+  {
+    "id": "4908",
+    "n": "UNICEF",
+    "lat": 38.3664,
+    "lon": -0.491105
+  },
+  {
+    "id": "4909",
+    "n": "UNICEF",
+    "lat": 38.3662,
+    "lon": -0.491205
+  },
+  {
+    "id": "4910",
+    "n": "GRAN VÍA-BENISAUDET",
+    "lat": 38.3642,
+    "lon": -0.489716
+  },
+  {
+    "id": "4912",
+    "n": "HOSPITAL SANT JOAN",
+    "lat": 38.3899,
+    "lon": -0.435056
+  },
+  {
+    "id": "5000",
+    "n": "CERES",
+    "lat": 38.3599,
+    "lon": -0.492141
+  },
+  {
+    "id": "5001",
+    "n": "MERCADILLO-TEULADA",
+    "lat": 38.3583,
+    "lon": -0.496305
+  },
+  {
+    "id": "5002",
+    "n": "A. IBARRA",
+    "lat": 38.3594,
+    "lon": -0.491244
+  },
+  {
+    "id": "5010",
+    "n": "PLAZA CASTALLA",
+    "lat": 38.3696,
+    "lon": -0.471216
+  },
+  {
+    "id": "5012",
+    "n": "GRAN VÍA-BENISAUDET",
+    "lat": 38.3644,
+    "lon": -0.48883
+  },
+  {
+    "id": "5013",
+    "n": "GRAN VÍA-BENISAUDET",
+    "lat": 38.3643,
+    "lon": -0.487941
+  },
+  {
+    "id": "5014",
+    "n": "HOSPITAL-GRAN VÍA",
+    "lat": 38.3648,
+    "lon": -0.485702
+  },
+  {
+    "id": "5015",
+    "n": "MERCADILLO-GRAN VÍA",
+    "lat": 38.3599,
+    "lon": -0.497302
+  },
+  {
+    "id": "5101",
+    "n": "LAS FRANCISCANAS",
+    "lat": 38.3484,
+    "lon": -0.503249
+  },
+  {
+    "id": "5102",
+    "n": "GUTIÉRREZ MELLADO",
+    "lat": 38.3481,
+    "lon": -0.505616
+  },
+  {
+    "id": "5103",
+    "n": "PUENTE ROJO",
+    "lat": 38.3491,
+    "lon": -0.507516
+  },
+  {
+    "id": "5104",
+    "n": "M. ALBEROLA",
+    "lat": 38.3506,
+    "lon": -0.506835
+  },
+  {
+    "id": "5105",
+    "n": "FELICÍSIMO RUÍZ",
+    "lat": 38.3519,
+    "lon": -0.508585
+  },
+  {
+    "id": "5109",
+    "n": "LUIS RIVERA",
+    "lat": 38.3527,
+    "lon": -0.513125
+  },
+  {
+    "id": "5110",
+    "n": "JORNET NAVARRO",
+    "lat": 38.351,
+    "lon": -0.51006
+  },
+  {
+    "id": "5111",
+    "n": "RICARDO FERRÉ",
+    "lat": 38.3494,
+    "lon": -0.5089
+  },
+  {
+    "id": "5112",
+    "n": "PUENTE ROJO",
+    "lat": 38.3486,
+    "lon": -0.506996
+  },
+  {
+    "id": "5114",
+    "n": "LAS FRANCISCANAS",
+    "lat": 38.3484,
+    "lon": -0.503077
+  },
+  {
+    "id": "5118",
+    "n": "CRUZ ROJA",
+    "lat": 38.3536,
+    "lon": -0.508095
+  },
+  {
+    "id": "5119",
+    "n": "GUTIÉRREZ MELLADO",
+    "lat": 38.348,
+    "lon": -0.50569
+  },
+  {
+    "id": "5124",
+    "n": "PASO A NIVEL",
+    "lat": 38.3473,
+    "lon": -0.504432
+  },
+  {
+    "id": "5125",
+    "n": "PASO A NIVEL",
+    "lat": 38.3474,
+    "lon": -0.503775
+  },
+  {
+    "id": "5201",
+    "n": "ESTADIO RICO PÉREZ",
+    "lat": 38.3581,
+    "lon": -0.494503
+  },
+  {
+    "id": "5300",
+    "n": "CASTILLO SANTA BARBARA",
+    "lat": 38.35,
+    "lon": -0.47752
+  },
+  {
+    "id": "6098",
+    "n": "PÉREZ GALDÓS-TUCUMÁN",
+    "lat": 38.3472,
+    "lon": -0.493152
+  },
+  {
+    "id": "6099",
+    "n": "REPRESENTANTES",
+    "lat": 38.3516,
+    "lon": -0.487291
+  },
+  {
+    "id": "6100",
+    "n": "ESTACIÓN-SALAMANCA",
+    "lat": 38.3437,
+    "lon": -0.494305
+  },
+  {
+    "id": "6101",
+    "n": "PÉREZ GALDÓS-MARVÁ",
+    "lat": 38.3479,
+    "lon": -0.491503
+  },
+  {
+    "id": "6102",
+    "n": "PLAZA TORDERA",
+    "lat": 38.3496,
+    "lon": -0.488757
+  },
+  {
+    "id": "6118",
+    "n": "PUERTA DE ALICANTE",
+    "lat": 38.3422,
+    "lon": -0.516437
+  },
+  {
+    "id": "6121",
+    "n": "RÍO MUNI",
+    "lat": 38.3445,
+    "lon": -0.517262
+  },
+  {
+    "id": "6122",
+    "n": "PUERTA DE ALICANTE",
+    "lat": 38.3429,
+    "lon": -0.516881
+  },
+  {
+    "id": "6123",
+    "n": "DE LA VEGA",
+    "lat": 38.3433,
+    "lon": -0.515575
+  },
+  {
+    "id": "6126",
+    "n": "RÍO MUNI",
+    "lat": 38.3445,
+    "lon": -0.517055
+  },
+  {
+    "id": "6127",
+    "n": "HERNÁNDEZ MATA-LLIBER",
+    "lat": 38.3434,
+    "lon": -0.516602
+  },
+  {
+    "id": "6142",
+    "n": "CINCO SOLES",
+    "lat": 38.3664,
+    "lon": -0.506383
+  },
+  {
+    "id": "6143",
+    "n": "J. VERDAGUER",
+    "lat": 38.3645,
+    "lon": -0.505751
+  },
+  {
+    "id": "6144",
+    "n": "P. HORADADA",
+    "lat": 38.3636,
+    "lon": -0.504307
+  },
+  {
+    "id": "6153",
+    "n": "C.C. VISTAHERMOSA-SUR",
+    "lat": 38.3694,
+    "lon": -0.467015
+  },
+  {
+    "id": "6154",
+    "n": "C.C. VISTAHERMOSA-NORTE",
+    "lat": 38.3708,
+    "lon": -0.467548
+  },
+  {
+    "id": "6156",
+    "n": "IES RADIO EXTERIOR",
+    "lat": 38.3652,
+    "lon": -0.419541
+  },
+  {
+    "id": "6159",
+    "n": "VISTAHERMOSA-EUCALIPTO",
+    "lat": 38.3703,
+    "lon": -0.464325
+  },
+  {
+    "id": "6160",
+    "n": "PAU 5-CONSTITUCIÓN",
+    "lat": 38.3865,
+    "lon": -0.418164
+  },
+  {
+    "id": "6161",
+    "n": "GARBERÍ-R. SOLER",
+    "lat": 38.3836,
+    "lon": -0.414833
+  },
+  {
+    "id": "6162",
+    "n": "LA MARJAL",
+    "lat": 38.3762,
+    "lon": -0.421587
+  },
+  {
+    "id": "6163",
+    "n": "PAÍSES ESCANDINAVOS (TRAM)",
+    "lat": 38.3721,
+    "lon": -0.419902
+  },
+  {
+    "id": "6164",
+    "n": "LA MARJAL",
+    "lat": 38.3759,
+    "lon": -0.420054
+  },
+  {
+    "id": "6165",
+    "n": "PLA VALLONGA-MISTRAL",
+    "lat": 38.3479,
+    "lon": -0.555589
+  },
+  {
+    "id": "6166",
+    "n": "PÍO XII",
+    "lat": 38.3558,
+    "lon": -0.480235
+  },
+  {
+    "id": "6200",
+    "n": "REPRESENTANTES",
+    "lat": 38.3523,
+    "lon": -0.486179
+  },
+  {
+    "id": "6201",
+    "n": "PLAZA TORDERA",
+    "lat": 38.3496,
+    "lon": -0.488951
+  },
+  {
+    "id": "6202",
+    "n": "PÉREZ GALDÓS-MARVÁ",
+    "lat": 38.348,
+    "lon": -0.491776
+  },
+  {
+    "id": "6203",
+    "n": "PÉREZ GALDÓS-TUCUMÁN",
+    "lat": 38.3473,
+    "lon": -0.493333
+  },
+  {
+    "id": "6210",
+    "n": "JIJONA - SANIDAD",
+    "lat": 38.3529,
+    "lon": -0.485359
+  },
+  {
+    "id": "6212",
+    "n": "PUERTO VIEJO",
+    "lat": 38.3435,
+    "lon": -0.47953
+  },
+  {
+    "id": "6213",
+    "n": "PUERTA DEL MAR - POSTIGUET",
+    "lat": 38.3446,
+    "lon": -0.479261
+  }
+]
