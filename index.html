@@ -1,52 +1,96 @@
-// 1. Inicializar el mapa
-const map = L.map('map').setView([38.345, -0.49], 14);
-
-// 2. Capa de mapa (CartoDB para evitar bloqueos 403)
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '© OpenStreetMap'
-}).addTo(map);
-
-// 3. Cargar el archivo paradas.json
-fetch('paradas.json')
-    .then(response => response.json())
-    .then(paradas => {
-        paradas.forEach(p => {
-            // Creamos un marcador por cada parada del JSON
-            const marker = L.marker([p.lat, p.lon]).addTo(map);
-            
-            // Al hacer clic, mostramos el nombre y consultamos tiempo real
-            marker.on('click', () => {
-                document.getElementById('info').innerHTML = `
-                    <b>${p.n}</b><br>
-                    <small>ID Parada: ${p.id}</small><br>
-                    <hr>
-                    <div id="tiempos">Consultando tiempo real...</div>
-                `;
-                obtenerTiempos(p.id);
-            });
-        });
-    })
-    .catch(error => console.error('Error al cargar paradas:', error));
-
-// 4. Función de tiempo real (Recordatorio: requiere Proxy CORS en GitHub Pages)
-async function obtenerTiempos(stopId) {
-    const proxy = "https://cors-anywhere.herokuapp.com/";
-    const urlApi = `https://api.vectalia.es/v1/alicante/stops/${stopId}/estimations`;
-
-    try {
-        const response = await fetch(proxy + urlApi);
-        const data = await response.json();
-        
-        let html = "";
-        if (data && data.length > 0) {
-            data.forEach(bus => {
-                html += `🚍 L${bus.linea}: <b>${bus.minutos} min</b><br>`;
-            });
-        } else {
-            html = "Sin buses próximos.";
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Alicante - Tiempo Real</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+    <style>
+        body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        #map { height: 100vh; width: 100%; }
+        .info-panel { 
+            position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+            width: 90%; max-width: 400px; z-index: 1000;
+            background: white; padding: 15px; border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); text-align: center;
         }
-        document.getElementById('tiempos').innerHTML = html;
-    } catch (e) {
-        document.getElementById('tiempos').innerHTML = "Error de conexión.";
-    }
-}
+        hr { border: 0; border-top: 1px solid #eee; margin: 10px 0; }
+    </style>
+</head>
+<body>
+
+    <div id="map"></div>
+    <div id="info" class="info-panel">Toca una parada para ver los tiempos</div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script>
+        // 1. Inicializar el mapa centrado en Alicante
+        const map = L.map('map').setView([38.345, -0.49], 14);
+
+        // 2. Capa de mapa (CartoDB para evitar bloqueos)
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        // 3. Cargar el archivo paradas.json que generamos con Python
+        fetch('paradas.json')
+            .then(response => response.json())
+            .then(paradas => {
+                paradas.forEach(p => {
+                    // Usamos los campos 'lat', 'lon', 'n' e 'id' de tu JSON
+                    const marker = L.marker([p.lat, p.lon]).addTo(map);
+                    
+                    marker.on('click', () => {
+                        // Preparamos el panel con un contenedor vacío para los tiempos
+                        document.getElementById('info').innerHTML = `
+                            <strong>${p.n}</strong><br>
+                            <small>ID Parada: ${p.id}</small>
+                            <hr>
+                            <div id="tiempos">Consultando tiempo real...</div>
+                        `;
+                        // Llamamos a la API usando el stop_id[cite: 1]
+                        obtenerTiempos(p.id);
+                    });
+                });
+            })
+            .catch(error => {
+                console.error('Error al cargar paradas.json:', error);
+                document.getElementById('info').innerHTML = "Error al cargar la base de datos de paradas.";
+            });
+
+        // 4. Función de tiempo real
+        async function obtenerTiempos(stopId) {
+            // El proxy es necesario para evitar el error CORS en GitHub Pages
+            const proxy = "https://cors-anywhere.herokuapp.com/";
+            const urlApi = `https://api.vectalia.es/v1/alicante/stops/${stopId}/estimations`;
+
+            try {
+                const response = await fetch(proxy + urlApi);
+                const data = await response.json();
+                
+                let html = "";
+                if (data && data.length > 0) {
+                    data.forEach(bus => {
+                        html += `🚍 L${bus.linea}: <strong>${bus.minutos} min</strong><br>`;
+                    });
+                } else {
+                    html = "No hay buses previstos próximamente.";
+                }
+                // Actualizamos el div específico de tiempos
+                const divTiempos = document.getElementById('tiempos');
+                if(divTiempos) divTiempos.innerHTML = html;
+                
+            } catch (e) {
+                const divTiempos = document.getElementById('tiempos');
+                if(divTiempos) divTiempos.innerHTML = "Error de conexión con Vectalia.";
+                console.error(e);
+            }
+        }
+    </script>
+</body>
+</html>
