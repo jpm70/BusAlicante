@@ -1,56 +1,52 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Bus Alicante - Prototipo</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <style>
-        body { margin: 0; padding: 0; font-family: sans-serif; }
-        #map { height: 100vh; width: 100%; }
-        .info-panel { 
-            position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
-            width: 90%; max-width: 400px; z-index: 1000;
-            background: white; padding: 15px; border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2); text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <div id="map"></div>
-    <div id="info" class="info-panel">Toca un marcador para ver tiempos</div>
+// 1. Inicializar el mapa
+const map = L.map('map').setView([38.345, -0.49], 14);
 
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script>
-        // Coordenadas iniciales cerca de Luceros (38.3466, -0.4892)
-        const map = L.map('map').setView([38.345, -0.49], 15);
+// 2. Capa de mapa (CartoDB para evitar bloqueos 403)
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '© OpenStreetMap'
+}).addTo(map);
 
-        // Nuevo servidor de mapas para evitar el bloqueo 403
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-            attribution: '© OpenStreetMap contributors'
-        }).addTo(map);
-
-        // Datos extraídos de tu stops.txt[cite: 1]
-        const paradas = [
-            {id: "2501", n: "MAISONNAVE-PORTUGAL", lat: 38.3434, lon: -0.491749},
-            {id: "2503", n: "LUCEROS-EL SABIO", lat: 38.3466, lon: -0.489226},
-            {id: "2604", n: "MERCADO-EL SABIO", lat: 38.3474, lon: -0.486647},
-            {id: "4009", n: "PUERTA DEL MAR", lat: 38.3452, lon: -0.478817},
-            {id: "3101", n: "LUCEROS", lat: 38.3463, lon: -0.490516}
-        ];
-
+// 3. Cargar el archivo paradas.json
+fetch('paradas.json')
+    .then(response => response.json())
+    .then(paradas => {
         paradas.forEach(p => {
+            // Creamos un marcador por cada parada del JSON
             const marker = L.marker([p.lat, p.lon]).addTo(map);
+            
+            // Al hacer clic, mostramos el nombre y consultamos tiempo real
             marker.on('click', () => {
-                document.getElementById('info').innerHTML = `<b>${p.n}</b><br>ID: ${p.id}<br><small>Consultando tiempo real...</small>`;
+                document.getElementById('info').innerHTML = `
+                    <b>${p.n}</b><br>
+                    <small>ID Parada: ${p.id}</small><br>
+                    <hr>
+                    <div id="tiempos">Consultando tiempo real...</div>
+                `;
                 obtenerTiempos(p.id);
             });
         });
+    })
+    .catch(error => console.error('Error al cargar paradas:', error));
 
-        function obtenerTiempos(stopId) {
-            // Aquí irá la llamada a la API que descubras por inspección
-            console.log("Consultando tiempos para la parada: " + stopId);
+// 4. Función de tiempo real (Recordatorio: requiere Proxy CORS en GitHub Pages)
+async function obtenerTiempos(stopId) {
+    const proxy = "https://cors-anywhere.herokuapp.com/";
+    const urlApi = `https://api.vectalia.es/v1/alicante/stops/${stopId}/estimations`;
+
+    try {
+        const response = await fetch(proxy + urlApi);
+        const data = await response.json();
+        
+        let html = "";
+        if (data && data.length > 0) {
+            data.forEach(bus => {
+                html += `🚍 L${bus.linea}: <b>${bus.minutos} min</b><br>`;
+            });
+        } else {
+            html = "Sin buses próximos.";
         }
-    </script>
-</body>
-</html>
+        document.getElementById('tiempos').innerHTML = html;
+    } catch (e) {
+        document.getElementById('tiempos').innerHTML = "Error de conexión.";
+    }
+}
