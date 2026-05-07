@@ -3,139 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Alicante Bus - Tiempo Real</title>
+    <title>Alicante Bus Pro - Completo</title>
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
     
     <style>
-        body { margin: 0; padding: 0; font-family: -apple-system, system-ui, sans-serif; background: #f0f2f5; }
+        :root { --primary: #2563eb; --accent: #d97706; --bg: #f8fafc; }
+        body { margin: 0; padding: 0; font-family: -apple-system, system-ui, sans-serif; background: var(--bg); color: #1e293b; }
+        
         #map { height: 100vh; width: 100%; z-index: 1; }
 
-        /* Buscador superior */
+        /* Buscador Superior */
         .search-container {
             position: fixed; top: 15px; left: 50%; transform: translateX(-50%);
-            z-index: 1000; width: 90%; max-width: 400px;
+            z-index: 1000; width: 90%; max-width: 450px;
         }
         #searchInput { 
-            width: 100%; padding: 12px 15px; border-radius: 12px; border: none;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2); font-size: 16px; outline: none;
+            width: 100%; padding: 14px 20px; border-radius: 15px; border: none;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15); font-size: 16px; outline: none;
+            box-sizing: border-box;
         }
 
-        /* Botón de Mi Ubicación */
+        /* Botón GPS */
         .geo-btn {
-            position: fixed; top: 80px; right: 15px; z-index: 1000;
-            background: white; border: none; width: 45px; height: 45px;
-            border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-            cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center;
+            position: fixed; top: 85px; right: 15px; z-index: 1000;
+            background: white; border: none; width: 48px; height: 48px;
+            border-radius: 50%; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            cursor: pointer; font-size: 22px; display: flex; align-items: center; justify-content: center;
         }
 
-        /* Panel de información inferior */
+        /* Panel de Información */
         .info-panel { 
             position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
-            width: 90%; max-width: 420px; z-index: 1000;
-            background: white; padding: 15px; border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.3); text-align: center;
-            max-height: 50vh; overflow-y: auto;
+            width: 92%; max-width: 450px; z-index: 1000;
+            background: white; padding: 18px; border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.25); text-align: center;
+            max-height: 45vh; overflow-y: auto; box-sizing: border-box;
         }
 
-        /* Tarjetas de autobús */
+        /* Tarjetas de Autobús */
         .bus-card {
             display: flex; justify-content: space-between; align-items: center;
-            background: #f8fafc; margin: 8px 0; padding: 12px;
-            border-radius: 12px; border-left: 5px solid #2563eb;
+            background: #f1f5f9; margin: 8px 0; padding: 12px 16px;
+            border-radius: 12px; border-left: 5px solid var(--primary);
         }
-        .bus-line { font-weight: bold; font-size: 1.1em; color: #1e293b; }
-        .bus-time { font-weight: bold; color: #d97706; font-size: 1.1em; }
+        .bus-line { font-weight: 800; font-size: 1.1em; }
+        .bus-time { font-weight: 800; color: var(--accent); font-size: 1.1em; }
         
-        .tag { font-size: 0.7em; padding: 2px 6px; border-radius: 5px; margin-left: 5px; }
-        .tag-live { background: #dcfce7; color: #166534; }
-        .tag-plan { background: #f1f5f9; color: #475569; }
+        /* Etiquetas */
+        .tag { font-size: 0.65em; padding: 3px 7px; border-radius: 6px; margin-left: 6px; text-transform: uppercase; vertical-align: middle; }
+        .tag-live { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+        .tag-plan { background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
 
-        hr { border: 0; border-top: 1px solid #e2e8f0; margin: 12px 0; }
-        .loading { color: #64748b; font-style: italic; padding: 10px; }
+        hr { border: 0; border-top: 1px solid #e2e8f0; margin: 14px 0; }
+        .loading { color: #64748b; font-style: italic; padding: 15px; }
+        .no-data { color: #94a3b8; padding: 10px; font-size: 0.9em; }
     </style>
 </head>
 <body>
 
     <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Buscar parada o número..." onkeyup="ejecutarBusqueda()">
+        <input type="text" id="searchInput" placeholder="Buscar parada o número..." onkeyup="filtrarBusqueda()">
     </div>
 
-    <button class="geo-btn" onclick="localizarUsuario()" title="Mi ubicación">📍</button>
+    <button class="geo-btn" onclick="localizarGps()" title="Mi ubicación actual">📍</button>
 
     <div id="map"></div>
 
     <div id="info" class="info-panel">
-        <strong>Bus Alicante</strong><br>
-        <span style="color: #64748b; font-size: 0.9em;">Toca una parada o usa el buscador</span>
+        <strong>Bus Alicante Pro</strong><br>
+        <span style="color: #64748b; font-size: 0.9em;">Selecciona una parada en el mapa</span>
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
 
     <script>
-        // --- CONFIGURACIÓN INICIAL ---
+        // --- 1. CONFIGURACIÓN DEL MAPA ---
         const map = L.map('map', { zoomControl: false }).setView([38.345, -0.49], 15);
         L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-            attribution: '© OpenStreetMap'
+            attribution: '© OpenStreetMap | Vectalia'
         }).addTo(map);
 
-        const markers = L.markerClusterGroup();
-        let databaseParadas = [];
-        let databaseHorarios = {};
-        let diccionarioMarcadores = {};
+        const markersGroup = L.markerClusterGroup();
+        let dbParadas = [];
+        let dbHorarios = {};
+        let marcadoresRef = {};
 
-        // --- CARGA DE DATOS ---
+        // --- 2. CARGA DE ARCHIVOS JSON ---
         Promise.all([
             fetch('paradas.json').then(r => r.json()),
             fetch('horarios.json').then(r => r.json())
         ]).then(([paradas, horarios]) => {
-            databaseParadas = paradas;
-            databaseHorarios = horarios;
+            dbParadas = paradas;
+            dbHorarios = horarios;
 
             paradas.forEach(p => {
                 const marker = L.marker([p.lat, p.lon]);
-                marker.on('click', () => abrirDetalleParada(p));
-                markers.addLayer(marker);
-                diccionarioMarcadores[p.id] = marker;
+                marker.on('click', () => verDetalle(p));
+                markersGroup.addLayer(marker);
+                marcadoresRef[p.id] = marker;
             });
-            map.addLayer(markers);
+            map.addLayer(markersGroup);
         }).catch(err => {
-            console.error("Error al cargar archivos JSON:", err);
-            document.getElementById('info').innerHTML = "Error al cargar datos. Verifica paradas.json y horarios.json";
+            console.error("Fallo cargando JSON:", err);
+            document.getElementById('info').innerHTML = "⚠️ Error cargando paradas.json o horarios.json";
         });
 
-        // --- FUNCIONES DE INTERFAZ ---
-        function abrirDetalleParada(p) {
+        // --- 3. GESTIÓN DE LA INTERFAZ ---
+        function verDetalle(p) {
             document.getElementById('info').innerHTML = `
-                <div style="font-weight: bold; font-size: 1.1em;">${p.n}</div>
-                <div style="color: #64748b; font-size: 0.85em;">Parada Nº ${p.id}</div>
+                <div style="font-weight: 800; font-size: 1.15em;">${p.n}</div>
+                <div style="color: #64748b; font-size: 0.85em; margin-top:3px;">Poste Nº ${p.id}</div>
                 <hr>
-                <div id="listadoTiempos" class="loading">Consultando tiempo real...</div>
+                <div id="outputTiempos" class="loading">Consultando tiempo real...</div>
             `;
             map.panTo([p.lat, p.lon]);
-            consultarTiemposVectalia(p.id);
+            fetchRealTime(p.id);
         }
 
-        function ejecutarBusqueda() {
-            const texto = document.getElementById('searchInput').value.toLowerCase();
-            if (texto.length < 2) return;
+        function filtrarBusqueda() {
+            const val = document.getElementById('searchInput').value.toLowerCase();
+            if (val.length < 2) return;
 
-            const encontrada = databaseParadas.find(p => 
-                p.id.includes(texto) || p.n.toLowerCase().includes(texto)
-            );
-
-            if (encontrada) {
-                const m = diccionarioMarcadores[encontrada.id];
-                markers.zoomToShowLayer(m, () => {
-                    m.fire('click');
-                });
+            const res = dbParadas.find(p => p.id.includes(val) || p.n.toLowerCase().includes(val));
+            if (res) {
+                const m = marcadoresRef[res.id];
+                markersGroup.zoomToShowLayer(m, () => m.fire('click'));
             }
         }
 
-        function localizarUsuario() {
+        function localizarGps() {
             map.locate({setView: true, maxZoom: 16});
         }
 
@@ -144,59 +144,69 @@
             L.marker(e.latlng).addTo(map).bindPopup("Estás aquí").openPopup();
         });
 
-        // --- LÓGICA DE TIEMPOS (REAL VS PROGRAMADO) ---
-        async function consultarTiemposVectalia(stopId) {
-            const container = document.getElementById('listadoTiempos');
-            const apiURL = `https://api.vectalia.es/v1/alicante/stops/${stopId}/estimations`;
-            const proxyURL = `https://api.allorigins.win/get?url=${encodeURIComponent(apiURL)}`;
+        // --- 4. LÓGICA DE TIEMPOS (TIEMPO REAL + OFFLINE) ---
+        async function fetchRealTime(stopId) {
+            const out = document.getElementById('outputTiempos');
+            const api = `https://api.vectalia.es/v1/alicante/stops/${stopId}/estimations`;
+            // Proxy para evitar bloqueo CORS
+            const proxy = `https://api.allorigins.win/get?url=${encodeURIComponent(api)}&_=${new Date().getTime()}`;
 
             try {
-                const response = await fetch(proxyURL);
+                const response = await fetch(proxy);
                 const json = await response.json();
                 const data = JSON.parse(json.contents);
 
                 if (Array.isArray(data) && data.length > 0) {
                     let html = "";
                     data.forEach(bus => {
-                        const linea = bus.linea || bus.line || "??";
+                        const l = bus.linea || bus.line || "??";
                         html += `
                             <div class="bus-card">
-                                <span class="bus-line">🚍 L${linea} <span class="tag tag-live">Vivo</span></span>
+                                <span class="bus-line">🚍 L${l} <span class="tag tag-live">Vivo</span></span>
                                 <span class="bus-time">${bus.minutos} min</span>
                             </div>`;
                     });
-                    container.innerHTML = html;
+                    out.innerHTML = html;
                 } else {
-                    mostrarRespaldoOffline(stopId, "Sin datos en tiempo real");
+                    renderOffline(stopId, "Sin buses en tiempo real ahora");
                 }
             } catch (error) {
-                mostrarRespaldoOffline(stopId, "Modo Horario Oficial");
+                renderOffline(stopId, "Modo Horario Oficial");
             }
         }
 
-        function mostrarRespaldoOffline(stopId, motivo) {
-            const container = document.getElementById('listadoTiempos');
-            const ahora = new Date();
-            const horaActual = ahora.getHours().toString().padStart(2, '0') + ":" + ahora.getMinutes().toString().padStart(2, '0');
+        function renderOffline(stopId, motivo) {
+            const out = document.getElementById('outputTiempos');
+            const ahoraStr = new Date().toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit', hour12: false });
             
-            const misHorarios = databaseHorarios[stopId] || [];
-            // Filtramos las próximas 3 horas programadas
-            const proximos = misHorarios.filter(item => item.h > horaActual).slice(0, 3);
+            const horariosParada = dbHorarios[stopId] || [];
+            
+            // FILTRADO: Agrupamos para obtener solo el PRÓXIMO bus de CADA línea
+            const porLinea = {};
+            horariosParada.forEach(item => {
+                if (item.h > ahoraStr) {
+                    // Si no tenemos esta línea o esta hora es más temprana, la guardamos
+                    if (!porLinea[item.l]) {
+                        porLinea[item.l] = item.h;
+                    }
+                }
+            });
 
-            let html = `<div style="font-size:0.75em; color:#64748b; margin-bottom:8px;">${motivo}</div>`;
-            
-            if (proximos.length > 0) {
-                proximos.forEach(item => {
+            let html = `<div style="font-size:0.75em; color:#94a3b8; margin-bottom:10px; font-weight:bold;">${motivo}</div>`;
+            const lineasDetectadas = Object.keys(porLinea).sort((a, b) => a.localeCompare(b, undefined, {numeric: true}));
+
+            if (lineasDetectadas.length > 0) {
+                lineasDetectadas.forEach(numL => {
                     html += `
-                        <div class="bus-card" style="opacity:0.8; border-left-color: #94a3b8;">
-                            <span class="bus-line">📅 L${item.l} <span class="tag tag-plan">Plan</span></span>
-                            <span class="bus-time">${item.h}</span>
+                        <div class="bus-card" style="opacity:0.85; border-left-color: #94a3b8;">
+                            <span class="bus-line">📅 L${numL} <span class="tag tag-plan">Plan</span></span>
+                            <span class="bus-time">${porLinea[numL]}</span>
                         </div>`;
                 });
             } else {
-                html += "No hay más buses programados para hoy.";
+                html += "<div class='no-data'>No hay más buses programados hoy para esta parada.</div>";
             }
-            container.innerHTML = html;
+            out.innerHTML = html;
         }
     </script>
 </body>
