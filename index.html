@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Alicante Bus Live - Modo Experto</title>
+    <title>Bus Alicante - Inteligente</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
         body { margin: 0; padding: 0; font-family: sans-serif; background: #f4f7f6; }
@@ -19,9 +19,12 @@
             background: #eef2ff; margin: 8px 0; padding: 12px;
             border-radius: 10px; border-left: 5px solid #2563eb;
         }
+        .bus-card.offline { border-left-color: #94a3b8; background: #f8fafc; }
         .bus-line { font-weight: bold; font-size: 1.1em; }
         .bus-time { color: #d97706; font-weight: bold; }
-        .error-box { background: #fee2e2; color: #b91c1c; padding: 10px; border-radius: 8px; font-size: 0.85em; margin-top: 10px; }
+        .tag { font-size: 0.7em; padding: 2px 6px; border-radius: 4px; text-transform: uppercase; }
+        .tag-real { background: #dcfce7; color: #166534; }
+        .tag-off { background: #f1f5f9; color: #475569; }
     </style>
 </head>
 <body>
@@ -29,92 +32,94 @@
     <div id="map"></div>
     <div id="info" class="info-panel">
         <strong>Bus Alicante</strong><br>
-        <small>Toca una parada para ver el tiempo real</small>
+        <small>Toca una parada para ver tiempos</small>
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
     <script>
-        // 1. Inicializar mapa
+        let baseHorarios = {};
         const map = L.map('map', { zoomControl: false }).setView([38.345, -0.49], 15);
         L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png').addTo(map);
 
-        // 2. Cargar TODAS las paradas (Gisbert-Alcalá, Estación, etc)
-        fetch('paradas.json')
-            .then(res => res.json())
-            .then(paradas => {
-                paradas.forEach(p => {
-                    const marker = L.marker([p.lat, p.lon]).addTo(map);
-                    marker.on('click', () => {
-                        document.getElementById('info').innerHTML = `
-                            <div style="font-weight: bold;">${p.n}</div>
-                            <div style="color: #666; font-size: 0.8em;">ID: ${p.id}</div>
-                            <hr style="border:0; border-top:1px solid #eee; margin: 10px 0;">
-                            <div id="tiempos">Cargando...</div>
-                        `;
-                        obtenerTiempos(p.id);
-                    });
+        // 1. CARGA DE DATOS: Paradas y Horarios Programados
+        Promise.all([
+            fetch('paradas.json').then(res => res.json()),
+            fetch('horarios.json').then(res => res.json())
+        ]).then(([paradas, horarios]) => {
+            baseHorarios = horarios;
+            paradas.forEach(p => {
+                const marker = L.marker([p.lat, p.lon]).addTo(map);
+                marker.on('click', () => {
+                    document.getElementById('info').innerHTML = `
+                        <strong>${p.n}</strong><br><small>ID: ${p.id}</small><hr>
+                        <div id="tiempos">Consultando tiempo real...</div>
+                    `;
+                    obtenerTiempos(p.id);
                 });
             });
+        }).catch(err => console.error("Error cargando archivos JSON:", err));
 
-        // 3. Función Inteligente de Tiempo Real
+        // 2. LÓGICA DE TIEMPOS
         async function obtenerTiempos(stopId) {
             const container = document.getElementById('tiempos');
             const targetUrl = `https://api.vectalia.es/v1/alicante/stops/${stopId}/estimations`;
             
-            // Intentamos 3 métodos: Directo (con extensión), Proxy 1 y Proxy 2
-            const proxies = [
-                "", // Directo
-                "https://api.allorigins.win/get?url=", 
-                "https://thingproxy.freeboard.io/fetch/"
-            ];
+            // Usamos un proxy para intentar el tiempo real
+            const proxy = "https://api.allorigins.win/get?url=";
 
-            for (let proxy of proxies) {
-                try {
-                    let fetchUrl = proxy ? (proxy.includes("allorigins") ? proxy + encodeURIComponent(targetUrl) : proxy + targetUrl) : targetUrl;
-                    
-                    const response = await fetch(fetchUrl);
-                    if (!response.ok) continue;
+            try {
+                const response = await fetch(proxy + encodeURIComponent(targetUrl));
+                if (!response.ok) throw new Error();
+                
+                const result = await response.json();
+                const data = JSON.parse(result.contents);
 
-                    let data;
-                    const rawData = await response.json();
-                    
-                    // AllOrigins devuelve los datos dentro de .contents
-                    data = proxy.includes("allorigins") ? JSON.parse(rawData.contents) : rawData;
-
-                    if (Array.isArray(data)) {
-                        renderBuses(data);
-                        return; // ÉXITO: Salimos del bucle
-                    }
-                } catch (e) {
-                    console.warn(`Fallo con el método: ${proxy || "Directo"}`);
+                if (Array.isArray(data) && data.length > 0) {
+                    renderRealTime(data);
+                } else {
+                    mostrarHorarioProgramado(stopId, "Sin buses en tiempo real");
                 }
+            } catch (e) {
+                // SI FALLA EL TIEMPO REAL (CORS, Red, etc), SALTA EL PLAN B
+                mostrarHorarioProgramado(stopId, "Modo Horario Oficial");
             }
-
-            // Si llegamos aquí, todos fallaron
-            container.innerHTML = `
-                <div class="error-box">
-                    <strong>Bloqueo de seguridad (CORS)</strong><br>
-                    Para ver los tiempos en esta parada (${stopId}), activa la extensión 
-                    <a href="https://bit.ly/allow-cors-ext" target="_blank">Allow CORS</a>.
-                </div>
-            `;
         }
 
-        function renderBuses(data) {
-            const container = document.getElementById('tiempos');
-            if (data.length === 0) {
-                container.innerHTML = "No hay buses previstos próximamente.";
-                return;
-            }
+        function renderRealTime(data) {
             let html = "";
             data.forEach(b => {
                 html += `
                     <div class="bus-card">
-                        <span class="bus-line">🚍 Línea ${b.linea}</span>
+                        <span class="bus-line">🚍 L${b.linea} <span class="tag tag-real">Vivo</span></span>
                         <span class="bus-time">${b.minutos} min</span>
                     </div>`;
             });
+            document.getElementById('tiempos').innerHTML = html;
+        }
+
+        function mostrarHorarioProgramado(stopId, motivo) {
+            const container = document.getElementById('tiempos');
+            const ahora = new Date();
+            const horaActual = ahora.getHours().toString().padStart(2, '0') + ":" + ahora.getMinutes().toString().padStart(2, '0');
+            
+            const misHorarios = baseHorarios[stopId] || [];
+            // Buscamos los próximos 3 buses tras la hora actual
+            const proximos = misHorarios.filter(h => h > horaActual).slice(0, 3);
+
+            let html = `<div style="font-size:0.7em; color:#64748b; margin-bottom:8px;">${motivo}</div>`;
+            
+            if (proximos.length > 0) {
+                proximos.forEach(hora => {
+                    html += `
+                        <div class="bus-card offline">
+                            <span class="bus-line">📅 Bus <span class="tag tag-off">Plan</span></span>
+                            <span class="bus-time">${hora}</span>
+                        </div>`;
+                });
+            } else {
+                html += "No hay más buses programados para hoy.";
+            }
             container.innerHTML = html;
         }
     </script>
