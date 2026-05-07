@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Alicante Bus Pro - Completo</title>
+    <title>Alicante Bus Pro - Multi-línea</title>
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
@@ -12,21 +12,17 @@
     <style>
         :root { --primary: #2563eb; --accent: #d97706; --bg: #f8fafc; }
         body { margin: 0; padding: 0; font-family: -apple-system, system-ui, sans-serif; background: var(--bg); color: #1e293b; }
-        
         #map { height: 100vh; width: 100%; z-index: 1; }
 
-        /* Buscador Superior */
         .search-container {
             position: fixed; top: 15px; left: 50%; transform: translateX(-50%);
             z-index: 1000; width: 90%; max-width: 450px;
         }
         #searchInput { 
             width: 100%; padding: 14px 20px; border-radius: 15px; border: none;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15); font-size: 16px; outline: none;
-            box-sizing: border-box;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15); font-size: 16px; outline: none; box-sizing: border-box;
         }
 
-        /* Botón GPS */
         .geo-btn {
             position: fixed; top: 85px; right: 15px; z-index: 1000;
             background: white; border: none; width: 48px; height: 48px;
@@ -34,32 +30,31 @@
             cursor: pointer; font-size: 22px; display: flex; align-items: center; justify-content: center;
         }
 
-        /* Panel de Información */
         .info-panel { 
             position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
             width: 92%; max-width: 450px; z-index: 1000;
             background: white; padding: 18px; border-radius: 24px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.25); text-align: center;
-            max-height: 45vh; overflow-y: auto; box-sizing: border-box;
+            max-height: 50vh; overflow-y: auto; box-sizing: border-box;
         }
 
-        /* Tarjetas de Autobús */
         .bus-card {
             display: flex; justify-content: space-between; align-items: center;
             background: #f1f5f9; margin: 8px 0; padding: 12px 16px;
             border-radius: 12px; border-left: 5px solid var(--primary);
+            animation: fadeIn 0.3s ease;
         }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
         .bus-line { font-weight: 800; font-size: 1.1em; }
         .bus-time { font-weight: 800; color: var(--accent); font-size: 1.1em; }
         
-        /* Etiquetas */
-        .tag { font-size: 0.65em; padding: 3px 7px; border-radius: 6px; margin-left: 6px; text-transform: uppercase; vertical-align: middle; }
+        .tag { font-size: 0.65em; padding: 3px 7px; border-radius: 6px; margin-left: 6px; text-transform: uppercase; }
         .tag-live { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
         .tag-plan { background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
 
         hr { border: 0; border-top: 1px solid #e2e8f0; margin: 14px 0; }
         .loading { color: #64748b; font-style: italic; padding: 15px; }
-        .no-data { color: #94a3b8; padding: 10px; font-size: 0.9em; }
     </style>
 </head>
 <body>
@@ -68,38 +63,34 @@
         <input type="text" id="searchInput" placeholder="Buscar parada o número..." onkeyup="filtrarBusqueda()">
     </div>
 
-    <button class="geo-btn" onclick="localizarGps()" title="Mi ubicación actual">📍</button>
+    <button class="geo-btn" onclick="localizarGps()">📍</button>
 
     <div id="map"></div>
 
     <div id="info" class="info-panel">
-        <strong>Bus Alicante Pro</strong><br>
-        <span style="color: #64748b; font-size: 0.9em;">Selecciona una parada en el mapa</span>
+        <strong>Bus Alicante</strong><br>
+        <span style="color: #64748b; font-size: 0.9em;">Selecciona una parada</span>
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
 
     <script>
-        // --- 1. CONFIGURACIÓN DEL MAPA ---
         const map = L.map('map', { zoomControl: false }).setView([38.345, -0.49], 15);
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-            attribution: '© OpenStreetMap | Vectalia'
-        }).addTo(map);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png').addTo(map);
 
         const markersGroup = L.markerClusterGroup();
         let dbParadas = [];
         let dbHorarios = {};
         let marcadoresRef = {};
 
-        // --- 2. CARGA DE ARCHIVOS JSON ---
+        // Carga de datos
         Promise.all([
             fetch('paradas.json').then(r => r.json()),
             fetch('horarios.json').then(r => r.json())
         ]).then(([paradas, horarios]) => {
             dbParadas = paradas;
             dbHorarios = horarios;
-
             paradas.forEach(p => {
                 const marker = L.marker([p.lat, p.lon]);
                 marker.on('click', () => verDetalle(p));
@@ -107,68 +98,47 @@
                 marcadoresRef[p.id] = marker;
             });
             map.addLayer(markersGroup);
-        }).catch(err => {
-            console.error("Fallo cargando JSON:", err);
-            document.getElementById('info').innerHTML = "⚠️ Error cargando paradas.json o horarios.json";
         });
 
-        // --- 3. GESTIÓN DE LA INTERFAZ ---
         function verDetalle(p) {
             document.getElementById('info').innerHTML = `
                 <div style="font-weight: 800; font-size: 1.15em;">${p.n}</div>
-                <div style="color: #64748b; font-size: 0.85em; margin-top:3px;">Poste Nº ${p.id}</div>
+                <div style="color: #64748b; font-size: 0.85em;">Poste Nº ${p.id}</div>
                 <hr>
-                <div id="outputTiempos" class="loading">Consultando tiempo real...</div>
+                <div id="outputTiempos" class="loading">Buscando todas las líneas...</div>
             `;
             map.panTo([p.lat, p.lon]);
             fetchRealTime(p.id);
         }
 
-        function filtrarBusqueda() {
-            const val = document.getElementById('searchInput').value.toLowerCase();
-            if (val.length < 2) return;
-
-            const res = dbParadas.find(p => p.id.includes(val) || p.n.toLowerCase().includes(val));
-            if (res) {
-                const m = marcadoresRef[res.id];
-                markersGroup.zoomToShowLayer(m, () => m.fire('click'));
-            }
-        }
-
-        function localizarGps() {
-            map.locate({setView: true, maxZoom: 16});
-        }
-
-        map.on('locationfound', (e) => {
-            L.circle(e.latlng, e.accuracy).addTo(map);
-            L.marker(e.latlng).addTo(map).bindPopup("Estás aquí").openPopup();
-        });
-
-        // --- 4. LÓGICA DE TIEMPOS (TIEMPO REAL + OFFLINE) ---
         async function fetchRealTime(stopId) {
             const out = document.getElementById('outputTiempos');
             const api = `https://api.vectalia.es/v1/alicante/stops/${stopId}/estimations`;
-            // Proxy para evitar bloqueo CORS
             const proxy = `https://api.allorigins.win/get?url=${encodeURIComponent(api)}&_=${new Date().getTime()}`;
 
             try {
                 const response = await fetch(proxy);
                 const json = await response.json();
-                const data = JSON.parse(json.contents);
+                let data = JSON.parse(json.contents);
+
+                // Si la API devuelve un solo objeto en lugar de un array, lo convertimos
+                if (data && !Array.isArray(data)) data = [data];
 
                 if (Array.isArray(data) && data.length > 0) {
                     let html = "";
+                    // Mostramos CADA bus que devuelva la API
                     data.forEach(bus => {
                         const l = bus.linea || bus.line || "??";
+                        const m = bus.minutos !== undefined ? bus.minutos : "??";
                         html += `
                             <div class="bus-card">
                                 <span class="bus-line">🚍 L${l} <span class="tag tag-live">Vivo</span></span>
-                                <span class="bus-time">${bus.minutos} min</span>
+                                <span class="bus-time">${m} min</span>
                             </div>`;
                     });
                     out.innerHTML = html;
                 } else {
-                    renderOffline(stopId, "Sin buses en tiempo real ahora");
+                    renderOffline(stopId, "Sin buses en tiempo real");
                 }
             } catch (error) {
                 renderOffline(stopId, "Modo Horario Oficial");
@@ -181,33 +151,46 @@
             
             const horariosParada = dbHorarios[stopId] || [];
             
-            // FILTRADO: Agrupamos para obtener solo el PRÓXIMO bus de CADA línea
-            const porLinea = {};
+            // Agrupamos por línea para mostrar la PRÓXIMA de cada una
+            const lineasUnicas = {};
             horariosParada.forEach(item => {
                 if (item.h > ahoraStr) {
-                    // Si no tenemos esta línea o esta hora es más temprana, la guardamos
-                    if (!porLinea[item.l]) {
-                        porLinea[item.l] = item.h;
+                    // Si la línea no está en el mapa o esta hora es anterior a la guardada
+                    if (!lineasUnicas[item.l] || item.h < lineasUnicas[item.l]) {
+                        lineasUnicas[item.l] = item.h;
                     }
                 }
             });
 
-            let html = `<div style="font-size:0.75em; color:#94a3b8; margin-bottom:10px; font-weight:bold;">${motivo}</div>`;
-            const lineasDetectadas = Object.keys(porLinea).sort((a, b) => a.localeCompare(b, undefined, {numeric: true}));
+            const keys = Object.keys(lineasUnicas).sort((a, b) => a.localeCompare(b, undefined, {numeric: true}));
 
-            if (lineasDetectadas.length > 0) {
-                lineasDetectadas.forEach(numL => {
+            if (keys.length > 0) {
+                let html = `<div style="font-size:0.75em; color:#94a3b8; margin-bottom:10px; font-weight:bold;">${motivo}</div>`;
+                keys.forEach(numL => {
                     html += `
                         <div class="bus-card" style="opacity:0.85; border-left-color: #94a3b8;">
                             <span class="bus-line">📅 L${numL} <span class="tag tag-plan">Plan</span></span>
-                            <span class="bus-time">${porLinea[numL]}</span>
+                            <span class="bus-time">${lineasUnicas[numL]}</span>
                         </div>`;
                 });
+                out.innerHTML = html;
             } else {
-                html += "<div class='no-data'>No hay más buses programados hoy para esta parada.</div>";
+                out.innerHTML = "<div class='no-data'>No hay más líneas programadas hoy.</div>";
             }
-            out.innerHTML = html;
         }
+
+        function filtrarBusqueda() {
+            const val = document.getElementById('searchInput').value.toLowerCase();
+            if (val.length < 2) return;
+            const res = dbParadas.find(p => p.id.includes(val) || p.n.toLowerCase().includes(val));
+            if (res) {
+                const m = marcadoresRef[res.id];
+                markersGroup.zoomToShowLayer(m, () => m.fire('click'));
+            }
+        }
+
+        function localizarGps() { map.locate({setView: true, maxZoom: 16}); }
+        map.on('locationfound', (e) => { L.marker(e.latlng).addTo(map).bindPopup("Estás aquí").openPopup(); });
     </script>
 </body>
 </html>
